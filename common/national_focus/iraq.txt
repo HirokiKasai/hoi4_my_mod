@@ -1,0 +1,393 @@
+﻿
+focus_tree = {
+	id = iraq_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = IRQ
+		}
+	}
+	
+	default = no
+
+	initial_show_position = {
+		focus = IRQ_army_effort
+	}
+
+	focus = {
+		id = IRQ_battle_of_sau
+		icon = GFX_goal_generic_major_war
+		x = 4
+		y = 0
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 40
+		}
+		
+		available_if_capitulated = yes
+		will_lead_to_war_with = SAU
+
+		completion_reward = {
+			add_war_support = 0.25
+		    SAU = {
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_owned_by = PREV
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_battle_of_persia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = IRQ_battle_of_sau }
+		relative_position_id = IRQ_battle_of_sau
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 40
+		}
+		
+		available_if_capitulated = yes
+		will_lead_to_war_with = PER
+
+		completion_reward = {
+			add_war_support = 0.25
+		    PER = {
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_owned_by = PREV
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_research_and_war
+		icon = GFX_focus_research
+		prerequisite = { focus = IRQ_battle_of_persia }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_battle_of_persia
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = IRQ_industrial_complex
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = IRQ_research_and_war }
+		x = 1
+		y = 1
+		relative_position_id = IRQ_research_and_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			every_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_tot_economic_mobilisation
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = IRQ_research_and_war }
+		x = -1
+		y = 1
+		relative_position_id = IRQ_research_and_war
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_ideas = militarism_focus
+			if = {
+				limit = {
+					has_war_support < 0.8
+				}
+				add_war_support = 0.1
+			}
+			else_if = {
+				limit = {
+					has_idea = tot_economic_mobilisation
+				}
+				add_political_power = 150
+			}
+			else = {
+				add_ideas = tot_economic_mobilisation
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_iraq_expanded
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		prerequisite = { focus = IRQ_tot_economic_mobilisation }
+		prerequisite = { focus = IRQ_industrial_complex }
+		x = 1
+		y = 1
+		relative_position_id = IRQ_tot_economic_mobilisation
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			transfer_state = 765
+			transfer_state = 658
+			transfer_state = 659
+			transfer_state = 454
+			transfer_state = 183
+
+			add_state_core = 765
+			add_state_core = 658
+			add_state_core = 659
+			add_state_core = 454
+			add_state_core = 183
+
+
+            YEM = {
+            	ROOT = {
+            		annex_country = {
+            			target = PREV
+            			transfer_troops = yes
+            		}
+            	}
+
+            	every_state = {
+            		limit = {
+            			is_owned_by = PREV
+            		}
+            		add_core_of = ROOT
+            	}
+            }
+
+            OMA = {
+            	ROOT = {
+            		annex_country = {
+            			target = PREV
+            			transfer_troops = yes
+            		}
+            	}
+
+            	every_state = {
+            		limit = {
+            			is_owned_by = PREV
+            		}
+            		add_core_of = ROOT
+            	}
+            }
+
+			CHI = {
+				annex_country = {
+                    target = SIK
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = XSM
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = SHX
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = GXC
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = YUN
+                    transfer_troops = yes
+                }
+				puppet = TIB
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = ROOT
+                    }
+                    add_extra_state_shared_building_slots = 10
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_battle_of_afg
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = IRQ_iraq_expanded }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_iraq_expanded
+		cost = 5
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			factor = 40
+		}
+		
+		available_if_capitulated = yes
+		will_lead_to_war_with = AFG
+
+		completion_reward = {
+		    AFG = {
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_owned_by = PREV
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_return_to_persia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = IRQ_battle_of_afg }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_battle_of_afg
+		cost = 5
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+        	date > 1940.1.1
+        }
+
+		available_if_capitulated = yes
+		will_lead_to_war_with = ENG
+		will_lead_to_war_with = ITA
+		will_lead_to_war_with = SPA
+		will_lead_to_war_with = FRA
+
+		completion_reward = {
+		    create_wargoal = {
+        		type = annex_everything
+        		target = ENG
+        	}
+		    create_wargoal = {
+        		type = annex_everything
+        		target = ITA
+        	}
+		    create_wargoal = {
+        		type = annex_everything
+        		target = SPA
+        	}
+		    create_wargoal = {
+        		type = annex_everything
+        		target = FRA
+        	}
+		}
+	}
+
+	shared_focus = MY_prophecy		
+
+}
