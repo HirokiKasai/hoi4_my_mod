@@ -1757,7 +1757,7 @@ ideas = {
 
 		my_tank_board = {
 			
-			picture = usa_tank_destroyer_board
+			picture = GFX_focus_generic_tank_production
 
 			available = {
 				has_completed_focus = MY_future_army_design
@@ -2217,36 +2217,12 @@ ideas = {
 		}
 
 		my_light_aircraft = {
-			picture = FNG_japan_money
+			picture = GFX_focus_jap_zero
 			available = {
 				has_completed_focus = MY_future_air_design
 			}
 
 			cost = 50
-
- 			allowed = {
- 				NOT = { OR = { tag = GER tag = ENG tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM tag = YUG } }
- 				if = {
- 					limit = {
- 						has_dlc = "Waking the Tiger"
- 					}
- 					NOT = {
- 						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
- 					}
- 				}
- 				NOT = {
- 					AND = {
- 						OR = { tag = MEX tag = HOL }
- 						has_dlc = "Man the Guns"
- 					}
- 				}
- 				NOT = {
- 					AND = {
- 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
- 						has_dlc = "La Resistance"
- 					}
- 				}
- 			}
 			
 			research_bonus = {
 				air_equipment = 0.15
@@ -2257,35 +2233,12 @@ ideas = {
 
 
 		my_bomber_aircraft = {
-			picture = LIB_firestone_bailout
+			picture = GFX_focus_usa_escort_fighters
 			available = {
 				has_completed_focus = MY_future_air_design
 			}
 
 			cost = 50
-
- 			allowed = {
- 				NOT = { OR = { tag = GER tag = ENG tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM tag = YUG } }
- 				if = {
- 					limit = {
- 						has_dlc = "Waking the Tiger"
- 					}
- 					NOT = {
- 						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
- 					}
- 				}
- 				NOT = { 					AND = {
- 						OR = { tag = MEX tag = HOL }
- 						has_dlc = "Man the Guns"
- 					}
- 				}
- 				NOT = {
- 					AND = {
- 						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
- 						has_dlc = "La Resistance"
- 					}
- 				}
- 			}
 			
 			research_bonus = {
 				air_equipment = 0.15
