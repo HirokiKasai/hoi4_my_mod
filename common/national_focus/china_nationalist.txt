@@ -1837,6 +1837,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
             add_offsite_building = { type = industrial_complex level = 20 }
+			army_experience = 500
+			navy_experience = 450
+			air_experience = 350
 			add_tech_bonus = {
 				name = CHI_unified_industrial_planning
 				bonus = 1.0
