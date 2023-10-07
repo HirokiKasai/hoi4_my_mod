@@ -1001,7 +1001,7 @@
 			}
 		}
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -1040,6 +1040,12 @@
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_stability = 0.1
+			every_state = {
+            	limit = {
+   				    is_owned_by = ROOT
+            	}
+            	add_core_of = ROOT
+            }
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1117,6 +1123,27 @@
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = JAP_greater_east_asian_co_prosperity_sphere
+			transfer_state = 422
+			add_state_core = 422
+			JAP = {
+                puppet = INS
+                puppet = AST
+                puppet = NZL
+				annex_country = {
+                    target = PHI
+                    transfer_troops = yes
+                }
+				add_to_faction = SIA
+			}
+			CHI = {
+                puppet = RAJ
+			}
+			IRQ = {
+                give_guarantee = CHI
+			}
+			USA = {
+                give_guarantee = CHI
+			}
 		}
 	}
 
