@@ -85,6 +85,30 @@
 		completion_reward = {
 			add_political_power = 120
 			warlord_rule_all_parties = yes
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = steel
+                    amount = 17
+                }
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = tungsten
+                    amount = 4
+                }
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = aluminium
+                    amount = 12
+                }
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = oil
+                    amount = 7
+                }
+            }
 		}
 	}
 

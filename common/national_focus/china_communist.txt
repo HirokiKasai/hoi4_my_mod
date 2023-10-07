@@ -87,6 +87,30 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_political_power = 120
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = steel
+                    amount = 17
+                }
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = tungsten
+                    amount = 4
+                }
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = aluminium
+                    amount = 12
+                }
+            }
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = oil
+                    amount = 7
+                }
+            }
 		}
 	}
 
