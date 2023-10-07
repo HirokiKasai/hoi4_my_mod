@@ -10,6 +10,7 @@ characters={
 			ideology=despotism
 			traits={
 			    gifted_shipping_magnate
+			    the_young_magnate
 			}
 			expire="1965.1.1.1"
 			id=-1
@@ -130,7 +131,7 @@ characters={
 					original_tag = IRQ
 				}
 				traits = {
-					army_chief_entrenchment_expert
+					army_chief_maneuver_3
 				}
 				cost = 100
 				ai_will_do = {
@@ -139,6 +140,32 @@ characters={
 		}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Ali Mahmud al Shaykh"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_arab_1"
+			}
+		}
+	}
+	IRQ_ali_mahmud_al_shaykh2={
+		advisor={
+
+
+			slot = high_command
+			idea_token = IRQ_ali_mahmud_al_shaykh2
+			ledger = army
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					army_infantry_3
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Ali Mahmud al Shaykh2"
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_arab_1"
@@ -350,7 +377,7 @@ characters={
 					original_tag = IRQ
 				}
 				traits = {
-					army_artillery_3
+					army_logistics_3
 				}
 				cost = 100
 				ai_will_do = {

@@ -2239,6 +2239,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Pe-2" #
 						type = small_plane_cas_airframe_2
+						allow_without_tech = yes
 						modules = {
 							fixed_main_weapon_slot = small_bomb_bay
 							fixed_auxiliary_weapon_slot_1 = light_mg_2x
@@ -3235,6 +3236,7 @@ focus_tree = {
 					type = ship_hull_heavy_2
 					name_group = SOV_BC_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 					modules = {
 						fixed_ship_battery_slot = ship_heavy_battery_1
 						fixed_ship_anti_air_slot = ship_anti_air_1
@@ -3339,6 +3341,7 @@ focus_tree = {
 					type = ship_hull_super_heavy_1
 					name_group = SOV_STATES
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 					modules = {
 						fixed_ship_battery_slot = ship_super_heavy_battery_1
 						fixed_ship_anti_air_slot = ship_anti_air_2
@@ -3481,6 +3484,7 @@ focus_tree = {
 					type = ship_hull_cruiser_submarine
 					name_group = SOV_SS_HISTORICAL
 					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 					modules = {
 						fixed_ship_torpedo_slot = ship_torpedo_sub_2
 						fixed_ship_engine_slot = sub_ship_engine_2
@@ -3525,6 +3529,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "K Class"
 						type = submarine_3
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_reliability_upgrade = 3
 							sub_engine_upgrade = 3
@@ -3557,6 +3562,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "K Class"
 						type = submarine_2
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_reliability_upgrade = 2
 							sub_engine_upgrade = 2
@@ -3661,6 +3667,7 @@ focus_tree = {
 						type = ship_hull_carrier_3
 						name_group = SOV_CV_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_deck_slot_1 = ship_deck_space
 							fixed_ship_deck_slot_2 = ship_deck_space
@@ -3694,6 +3701,7 @@ focus_tree = {
 						type = ship_hull_carrier_2
 						name_group = SOV_CV_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_deck_slot_1 = ship_deck_space
 							fixed_ship_deck_slot_2 = ship_deck_space
@@ -3727,6 +3735,7 @@ focus_tree = {
 						type = ship_hull_carrier_1
 						name_group = SOV_CV_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_deck_slot_1 = ship_deck_space
 							fixed_ship_deck_slot_2 = ship_deck_space
@@ -3763,6 +3772,7 @@ focus_tree = {
 						type = ship_hull_carrier_conversion_ca
 						name_group = SOV_CV_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_deck_slot_1 = ship_deck_space
 							fixed_ship_deck_slot_2 = ship_deck_space
@@ -3798,6 +3808,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Project 71 Class"
 						type = carrier_4
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_deckspace_upgrade = 4
 							carrier_armor_upgrade = 4
@@ -3823,6 +3834,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Project 71 Class"
 						type = carrier_3
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_deckspace_upgrade = 3
 							carrier_armor_upgrade = 3
@@ -3848,6 +3860,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Project 71 Class"
 						type = carrier_2
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_deckspace_upgrade = 2
 							carrier_armor_upgrade = 2
@@ -3876,6 +3889,7 @@ focus_tree = {
 					create_equipment_variant = {
 						name = "Project 71 Class"
 						type = carrier_1
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						upgrades = {
 							ship_deckspace_upgrade = 2
 							carrier_armor_upgrade = 1
@@ -6647,11 +6661,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
-			add_political_power = 250
+			add_political_power = 25
 
 			SOV_paranoia_low_decrease_effect = yes	
-			IF = {
-				limit = { has_dlc = "No Step Back"}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
@@ -6725,29 +6745,14 @@ focus_tree = {
 			}
 
 			SOV_paranoia_low_decrease_effect = yes
-			mark_focus_tree_layout_dirty = yes
-
-			CHI = {
-                add_equipment_to_stockpile = {
-                    type = infantry_equipment
-                    amount = 50000
-                    producer = SOV
-                }
-				add_equipment_to_stockpile = {
-					type = train_equipment
-					amount = 60
-					producer = SOV
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
 				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 2000
-					producer = SOV
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment
-					amount = 2000
-					producer = SOV
-				}
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -7082,13 +7087,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_first_moscow_trial_flag
-				days > 10
+				days > 175
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_tt
 				has_country_flag = {
 					flag = SOV_first_moscow_trial_flag
-					days > 10
+					days > 175
 				}
 			}
 		}
@@ -7334,13 +7339,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_second_moscow_trial_flag
-				days > 10
+				days > 175
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_military_tt
 				has_country_flag = {
 					flag = SOV_second_moscow_trial_flag
-					days > 10
+					days > 175
 				}
 			}
 		}
@@ -7432,13 +7437,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_trial_of_the_generals_flag
-				days > 10
+				days > 175
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_rights_tt
 				has_country_flag = {
 					flag = SOV_trial_of_the_generals_flag
-					days > 10
+					days > 175
 				}
 			}
 		}
@@ -7572,13 +7577,13 @@ focus_tree = {
 		available = {
 			has_country_flag = {
 				flag = SOV_third_moscow_trial_flag
-				days > 10
+				days > 175
 			}
 			custom_trigger_tooltip = {
 				tooltip = SOV_last_purge_focus_days_cult_tt
 				has_country_flag = {
 					flag = SOV_third_moscow_trial_flag
-					days > 10
+					days > 175
 				}
 			}
 			has_completed_focus = SOV_expand_the_agitprop
@@ -8678,7 +8683,15 @@ focus_tree = {
 					remove_ideas = trotskyite_plot_nsb
 				}
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -9877,7 +9890,15 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SOV_exiled_advisors_available_tt
 
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -10398,6 +10419,7 @@ focus_tree = {
 						NOT = { has_country_leader_ideology = stalinism }
 						is_in_faction = no
 						NOT = { has_war_with = ROOT }
+						is_subject = no
 					}
 					add_opinion_modifier = { modifier = SOV_international_socialist_association target = ROOT }
 					country_event = { id = generic.5 hours = 8 random_hours = 8 }
@@ -10412,6 +10434,7 @@ focus_tree = {
 							NOT = { has_country_leader_ideology = stalinism }
 							is_in_faction = no
 							NOT = { has_war_with = ROOT }
+							is_subject = no
 						}
 						add_opinion_modifier = { modifier = SOV_international_socialist_association target = ROOT }
 						country_event = { id = generic.5 hours = 8 random_hours = 8 }
@@ -15138,7 +15161,15 @@ ai_will_do = {
 				SOV_launch_stalinist_counter_measure = yes 
 				SOV_get_centre_military_support = yes
 			}
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 
@@ -15651,7 +15682,15 @@ ai_will_do = {
 			SOV_increase_opposition_army_support = yes
 			custom_effect_tooltip = SOV_the_hands_do_tt
 
-			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 	focus = {
@@ -17209,7 +17248,6 @@ ai_will_do = {
 		available_if_capitulated = no
 
 		will_lead_to_war_with = FIN
-		will_lead_to_war_with = IRQ
 
 		search_filters = {}
 
@@ -17229,7 +17267,6 @@ ai_will_do = {
 
 		completion_reward = {
 			create_wargoal = { type = annex_everything target = FIN }
-			create_wargoal = { type = annex_everything target = IRQ }
 		}
 	}	
 

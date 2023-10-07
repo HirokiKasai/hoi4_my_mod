@@ -78,7 +78,72 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		add_offsite_building = { type = industrial_complex level = 2 }
+		add_offsite_building = { type = industrial_complex level = 20 }
+		random_owned_controlled_state = {
+        	add_resource = {
+        		type = steel
+        		amount = 48
+        	}
+        }
+        random_owned_controlled_state = {
+        	add_resource = {
+        		type = tungsten
+      			amount = 8
+        	}
+        }
+        random_owned_controlled_state = {
+        	add_resource = {
+        		type = aluminium
+      			amount = 23
+        	}
+        }
+        random_owned_controlled_state = {
+        	add_resource = {
+        		type = oil
+      			amount = 18
+        	}
+        }
+		add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 50000
+            producer = SOV
+        }
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 128000
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = train_equipment
+			amount = 600
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 586000
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 19800
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = medium_tank_equipment_1
+			amount = 59800
+			producer = GER
+		}
+        add_equipment_to_stockpile = {
+			type = fighter_equipment_1
+			amount = 1000
+			producer = USA
+		}
+		add_equipment_to_stockpile = {
+			type = small_plane_cas_airframe_1
+			amount = 1000
+			producer = GER
+			variant_name = "Ju 87"
+		}
 	}
 }
 shared_focus = {
