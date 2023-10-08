@@ -1757,7 +1757,7 @@ ideas = {
 
 		my_tank_board = {
 			
-			picture = GFX_focus_generic_tank_production
+			picture = generic_armor
 
 			available = {
 				has_completed_focus = MY_future_army_design
@@ -2217,7 +2217,7 @@ ideas = {
 		}
 
 		my_light_aircraft = {
-			picture = GFX_focus_jap_zero
+			picture = generic_air_payment
 			available = {
 				has_completed_focus = MY_future_air_design
 			}
@@ -2233,7 +2233,7 @@ ideas = {
 
 
 		my_bomber_aircraft = {
-			picture = GFX_focus_usa_escort_fighters
+			picture = generic_air_bonus
 			available = {
 				has_completed_focus = MY_future_air_design
 			}
