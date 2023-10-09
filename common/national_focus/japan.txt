@@ -4526,8 +4526,17 @@
                         instant_build = yes
                     }
                 }
+                every_state = {
+                    limit = {
+                        is_owned_by = MAN
+                    }
+                    add_core_of = MAN
+                }
 			}
 			SIA = {
+				add_stability = 0.25
+				add_war_support = 0.25
+				add_political_power = 300
 			    transfer_state = 670
 			    transfer_state = 671
 			    transfer_state = 741
