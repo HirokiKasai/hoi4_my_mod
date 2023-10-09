@@ -4517,7 +4517,7 @@
                 }
                 every_owned_state = {
                     limit = {
-                        is_controlled_by = SIA
+                        is_controlled_by = MAN
                     }
                     add_extra_state_shared_building_slots = 10
                     add_building_construction = {
