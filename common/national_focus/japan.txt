@@ -4518,7 +4518,7 @@
                 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
-                    amount = 60000
+                    amount = 10000
                     producer = JAP
                 }
                 every_owned_state = {
@@ -4558,7 +4558,7 @@
                 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
-                    amount = 60000
+                    amount = 10000
                     producer = JAP
                 }
                 every_owned_state = {
