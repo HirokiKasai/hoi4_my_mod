@@ -4502,6 +4502,12 @@
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
+		    714 = {
+				add_resource = {
+					type = oil
+					amount = 160
+				}
+		    }
 			MAN = {				
 				add_stability = 0.25
 				add_war_support = 0.25
