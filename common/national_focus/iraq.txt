@@ -292,6 +292,10 @@ focus_tree = {
                     target = YUN
                     transfer_troops = yes
                 }
+				annex_country = {
+                    target = PRC
+                    transfer_troops = yes
+                }
 				puppet = TIB
                 every_owned_state = {
                     limit = {
