@@ -440,15 +440,6 @@ ideas = {
 				motorized = {
 					build_cost_ic = -0.25 instant = yes
 				}
-				mechanized = {
-					build_cost_ic = -0.25 instant = yes
-				}
-				armored_car = {
-					build_cost_ic = -0.25 instant = yes
-				}
-				armor = {
-					build_cost_ic = -0.25 instant = yes
-				}
 				artillery = {
 					build_cost_ic = -0.25 instant = yes
 				}
