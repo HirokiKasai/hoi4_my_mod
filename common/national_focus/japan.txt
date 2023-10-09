@@ -1134,18 +1134,28 @@
                     target = PHI
                     transfer_troops = yes
                 }
+                every_state = {
+                    limit = {
+                        is_owned_by = ROOT
+                    }
+                    add_core_of = ROOT
+                }
 				add_to_faction = SIA
 			}
 			CHI = {
                 puppet = RAJ
+                add_ideas = MY_bureau_of_ships_focus
+				add_to_faction = ENG
 			}
 			IRQ = {
                 give_guarantee = CHI
 			}
 			USA = {
                 give_guarantee = CHI
+				add_to_faction = ENG
+                add_ideas = MY_bureau_of_ships_focus
 			}
-			SOV = {
+			PRC = {
                 give_guarantee = CHI
 			}
 		}
