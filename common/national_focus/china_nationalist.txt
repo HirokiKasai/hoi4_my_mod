@@ -781,7 +781,7 @@
 		y = 1
 		relative_position_id = CHI_foreign_threats
 
-		cost = 10
+		cost = 30
 
 		ai_will_do = {
 			factor = 1
@@ -790,10 +790,6 @@
 		available = {
 			is_subject = no
 			is_in_faction = no
-		}
-
-		bypass = {
-			is_in_faction_with = PRC
 		}
 
 		cancel_if_invalid = yes
@@ -807,10 +803,9 @@
 		completion_reward = {
 			CHI = {
 				set_rule = { can_create_factions = yes }
-				create_faction = chinese_united_front
-			}
-			PRC = {
-				country_event = generic.5
+                ENG = {
+                    add_to_faction = CHI
+                }
 			}
 		}
 	}
@@ -845,6 +840,8 @@
 				has_war_with = MAN
 			}
 		}
+
+		will_lead_to_war_with = JAP
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
