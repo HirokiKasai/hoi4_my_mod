@@ -1516,21 +1516,29 @@
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = armor_bonus
+				name = artillery
 				bonus = 1.0
 				ahead_reduction = 8
 				uses = 8
 				category = artillery
-				category = rocket_artillery
 				category = anti_air
 				category = anti_tank
 			}
 			add_tech_bonus = {
-				name = motorized_bonus
+				name = secret_bonus
 				bonus = 1.0
 				ahead_reduction = 8
 				uses = 4
-				category = motorized_equipment
+				category = jet_technology
+				category = rocketry
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				ahead_reduction = 8
+				uses = 4
+				category = armor
 			}
 			add_ideas = MY_future_design_1
 
