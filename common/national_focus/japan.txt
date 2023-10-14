@@ -1147,7 +1147,6 @@
                 add_ideas = MY_bureau_of_ships_focus
 			}
 			ENG = {
-                add_to_faction = CHI
                 add_to_faction = USA
                 add_to_faction = FRA
                 add_to_faction = POR
