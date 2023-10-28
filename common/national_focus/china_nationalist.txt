@@ -804,17 +804,32 @@
 		completion_reward = {
 			CHI = {
 				set_rule = { can_create_factions = yes }
-                ENG = {
-                    add_to_faction = CHI
-                }
-                SOV = {
-                    create_wargoal = {
-                        target = "MAN"
-                        type = puppet_wargoal_focus
-                        expire = 0
-                        expire = 0
+				if = {
+                	limit = {
+                		JAP = {
+                    		is_ai = yes
+                    	}
+                	}
+    				create_faction = chinese_united_front
+    			}
+
+				if = {
+                	limit = {
+                		JAP = {
+                    		is_ai = no
+                    	}
+                	}
+                    ENG = {
+                        add_to_faction = CHI
                     }
-                }
+                    SOV = {
+                        create_wargoal = {
+                            target = "MAN"
+                            type = puppet_wargoal_focus
+                            expire = 0
+                        }
+                    }
+    			}
 			}
 		}
 	}
