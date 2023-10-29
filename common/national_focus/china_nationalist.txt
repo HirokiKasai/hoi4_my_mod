@@ -726,6 +726,42 @@
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_war_support = 0.1
+			annex_country = {
+                target = SIK
+                transfer_troops = yes
+            }
+			annex_country = {
+                target = XSM
+                transfer_troops = yes
+            }
+			annex_country = {
+                target = SHX
+                transfer_troops = yes
+            }
+			annex_country = {
+                target = GXC
+                transfer_troops = yes
+            }
+			annex_country = {
+                target = YUN
+                transfer_troops = yes
+            }
+			annex_country = {
+                target = PRC
+                transfer_troops = yes
+            }
+			puppet = TIB
+            every_owned_state = {
+                limit = {
+                    is_controlled_by = ROOT
+                }
+                add_extra_state_shared_building_slots = 10
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
 		}
 	}
 
@@ -804,43 +840,6 @@
 		completion_reward = {
 			CHI = {
 				set_rule = { can_create_factions = yes }
-				annex_country = {
-                    target = SIK
-                    transfer_troops = yes
-                }
-				annex_country = {
-                    target = XSM
-                    transfer_troops = yes
-                }
-				annex_country = {
-                    target = SHX
-                    transfer_troops = yes
-                }
-				annex_country = {
-                    target = GXC
-                    transfer_troops = yes
-                }
-				annex_country = {
-                    target = YUN
-                    transfer_troops = yes
-                }
-				annex_country = {
-                    target = PRC
-                    transfer_troops = yes
-                }
-				puppet = TIB
-                every_owned_state = {
-                    limit = {
-                        is_controlled_by = ROOT
-                    }
-                    add_extra_state_shared_building_slots = 10
-                    add_building_construction = {
-                        type = infrastructure
-                        level = 2
-                        instant_build = yes
-                    }
-                }
-
 				if = {
                 	limit = {
                 		JAP = {
