@@ -1167,7 +1167,7 @@
 		y = 1
 		relative_position_id = JAP_greater_east_asian_co_prosperity_sphere
 
-		cost = 5
+		cost = 30
 
 		available = { 
 			is_puppet = no 
@@ -1920,7 +1920,7 @@
 		y = 1
 		relative_position_id = JAP_liaison_conference
 
-		cost = 30
+		cost = 10
 
 		ai_will_do = {
 			factor = 3
@@ -2022,7 +2022,7 @@
 		}
 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
