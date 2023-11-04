@@ -800,6 +800,12 @@ focus_tree = {
                             target = IRQ
                         }
                     }
+                    SOV = {
+                        create_wargoal = {
+				            type = puppet_wargoal_focus
+                            target = IRQ
+                        }
+                    }
 				}
 			}
 			add_war_support = 0.05
@@ -869,7 +875,7 @@ focus_tree = {
 		prerequisite = { focus = TUR_ratify_the_six_arrows }
 		prerequisite = { focus = TUR_continue_the_policy_of_etatism }
 		available = {
-			OR = { 
+			OR = {
 				has_country_leader = {
 					character = TUR_ismet_inonu
 					ruling_only = yes
