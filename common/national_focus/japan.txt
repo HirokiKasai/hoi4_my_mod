@@ -1149,11 +1149,6 @@
 			ENG = {
                 add_to_faction = USA
                 add_to_faction = FRA
-                add_to_faction = POR
-                add_to_faction = SWE
-                add_to_faction = NOR
-                add_to_faction = TUR
-                add_to_faction = IRQ
 			}
 		}
 	}

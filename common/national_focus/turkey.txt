@@ -43,6 +43,37 @@ focus_tree = {
 		completion_reward = {
 			ENG = { country_event = { id = bftb_turkey.1 } }
 			custom_effect_tooltip = TUR_the_montreux_convention_tt
+			TUR = {
+            	add_manpower = 5000000
+			    add_ideas = MY_communism_army
+                add_timed_idea = {
+                    idea = MY_absolutism_early_production
+                    days = 365
+                }
+            	add_research_slot = 2
+                add_offsite_building = { type = industrial_complex level = 30 }
+	            add_offsite_building = { type = arms_factory level = 30 }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 120000
+                    producer = SOV
+                }
+                add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = 20000
+                    producer = SOV
+                }
+                add_equipment_to_stockpile = {
+                    type = train_equipment
+                    amount = 60
+                    producer = SOV
+                }
+                add_equipment_to_stockpile = {
+                    type = artillery_equipment
+                    amount = 20000
+                    producer = SOV
+                }
+            }
 		}
 	}
 
@@ -595,6 +626,8 @@ focus_tree = {
 			base = 10
 		}
 
+		will_lead_to_war_with = IRQ
+
 		bypass = {
 			AND = {
 				AFG = { exists = no }
@@ -641,6 +674,13 @@ focus_tree = {
 					}
 				}
 				IRQ = { country_event = { id = bftb_turkey.23 } }
+				TUR = {
+					add_manpower = 5000000
+					create_wargoal = {
+						type = annex_everything
+						target = IRQ
+					}
+				}
 			}
 			if = {
 				limit = {
