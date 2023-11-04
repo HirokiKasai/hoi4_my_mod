@@ -674,13 +674,6 @@ focus_tree = {
 					}
 				}
 				IRQ = { country_event = { id = bftb_turkey.23 } }
-				TUR = {
-					add_manpower = 5000000
-					create_wargoal = {
-						type = annex_everything
-						target = IRQ
-					}
-				}
 			}
 			if = {
 				limit = {
@@ -800,7 +793,13 @@ focus_tree = {
 					limit = {
 						owns_state = 799
 					}
-					country_event = { id = bftb_turkey.60 hours = 6 } 
+					country_event = { id = bftb_turkey.60 hours = 6 }
+                    TUR = {
+                        create_wargoal = {
+                            type = annex_everything
+                            target = IRQ
+                        }
+                    }
 				}
 			}
 			add_war_support = 0.05
