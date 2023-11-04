@@ -626,8 +626,6 @@ focus_tree = {
 			base = 10
 		}
 
-		will_lead_to_war_with = IRQ
-
 		bypass = {
 			AND = {
 				AFG = { exists = no }
@@ -779,6 +777,8 @@ focus_tree = {
 		bypass = {
 			TUR = { owns_state = 799 }
 		}
+
+		will_lead_to_war_with = IRQ
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
