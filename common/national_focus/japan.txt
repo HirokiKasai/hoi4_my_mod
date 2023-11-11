@@ -4497,6 +4497,10 @@
 					type = oil
 					amount = 160
 				}
+				add_resource = {
+					type = steel
+					amount = 278
+				}
 		    }
 			MAN = {				
 				add_stability = 0.25
@@ -4506,9 +4510,18 @@
                     target = MEN
                     transfer_troops = yes
                 }
+                add_ideas = MY_all_in
+                add_ideas = MY_absolutism
+                add_timed_idea = {
+                    idea = MY_absolutism_early_production
+                    days = 365
+                }
+                add_research_slot = 2
+                add_manpower = 5000000
+                add_offsite_building = { type = industrial_complex level = 20 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
-                    amount = 10000
+                    amount = 30000
                     producer = JAP
                 }
                 every_owned_state = {

@@ -1798,13 +1798,13 @@ ideas = {
 					build_cost_ic = -0.4
 			        soft_attack = 0.75
 			        hard_attack = 0.75
-					armor_value = 0.25
+					armor_value = 0.5
 					breakthrough = 0.5
 					reliability = 0.25
 				}
 				mechanized_equipment = {
 					build_cost_ic = -0.5
-					armor_value = 0.25
+					armor_value = 1
 					defense = 0.25
 					reliability = 0.2
 				}
