@@ -306,10 +306,40 @@ ideas = {
 			
 			modifier = {
 				democratic_drift = 0.5
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.3
 				production_speed_industrial_complex_factor = 1
 				industrial_capacity_factory = 0.5
 				industrial_capacity_dockyard = 0.5
+				production_factory_start_efficiency_factor = 0.75
+			}
+		}
+
+
+		MY_populism_early_production = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				political_power_factor = 1
+				consumer_goods_factor = -0.4
+				production_speed_arms_factory_factor = 1
+				military_leader_cost_factor = -0.90
 			}
 		}
 
