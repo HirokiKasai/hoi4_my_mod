@@ -12,7 +12,7 @@ state={
 			4111 5
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 4
 			air_base = 5
 		}
 		add_core_of = IRQ	
