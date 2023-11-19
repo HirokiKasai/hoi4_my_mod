@@ -25,7 +25,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		x = 6
 		y = 0
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 12
 		}
@@ -1151,7 +1151,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = GER_four_year_plan
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 9
@@ -1180,7 +1180,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = GER_autarky
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 9
 		}
@@ -1263,7 +1263,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_hermann_goring_werke
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}
@@ -1341,7 +1341,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_autarky
-		cost = 10
+		cost = 30
 		ai_will_do = {
 			factor = 4
 		}
@@ -6232,7 +6232,7 @@ focus_tree = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 7
 		}
@@ -6292,7 +6292,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_oppose_hitler
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -6353,7 +6353,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_secure_the_new_state
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 3
 		}
@@ -6404,7 +6404,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 9
 		}
@@ -6560,7 +6560,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_revive_the_kaiserreich
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
