@@ -1412,6 +1412,10 @@
 
 		completion_reward = {
 			add_ideas = MY_fascism
+			add_timed_idea = {
+				idea = MY_absolutism_early_production
+				days = 365
+			}
 		}
 	}
 

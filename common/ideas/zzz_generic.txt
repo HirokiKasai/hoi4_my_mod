@@ -284,8 +284,8 @@ ideas = {
 			modifier = {
 				fascism_drift = 0.5
  				production_speed_buildings_factor = 0.35
- 				max_planning = 0.5
- 				army_armor_attack_factor = 0.5
+ 				conscription = 0.05
+ 				production_factory_start_efficiency_factor = 0.25
 			}
 		}
 
@@ -567,6 +567,82 @@ ideas = {
 			}
 		}
 
+
+
+
+
+
+
+
+
+
+
+
+
+		MY_manpower_doctrine = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				weekly_manpower = 1000
+			}
+		}
+
+
+		MY_manpower_doctrine_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				weekly_manpower = 1500
+				war_support_weekly = 0.01
+				military_leader_cost_factor = -0.5
+			}
+		}
+
+
+		MY_manpower_doctrine_3 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_communism_drift_bonus
+
+			removal_cost = -1
+
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				industrial_capacity_factory = 0.2
+				weekly_manpower = 2500
+				war_support_weekly = 0.01
+				military_leader_cost_factor = -0.5
+			}
+		}
 
 
 
