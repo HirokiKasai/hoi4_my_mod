@@ -79,7 +79,7 @@ characters={
 					original_tag = IRQ
 				}
 				traits = {
-					navy_anti_submarine_3
+					navy_carrier_3
 				}
 				cost = 100
 				ai_will_do = {
@@ -131,7 +131,7 @@ characters={
 					original_tag = IRQ
 				}
 				traits = {
-					army_chief_maneuver_3
+					army_commando_3
 				}
 				cost = 100
 				ai_will_do = {
@@ -205,7 +205,7 @@ characters={
 					original_tag = IRQ
 				}
 				traits = {
-					air_chief_all_weather_3
+					air_chief_night_operations_3
 				}
 				cost = 100
 				ai_will_do = {
@@ -220,6 +220,7 @@ characters={
 			}
 		}
 	}
+
 	IRQ_mustafa_al_quidsi={
 		advisor={
 			cost = 100
@@ -235,7 +236,6 @@ characters={
 					blitzkrieg_theorist
 				}
 		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Mustafa al-Qudsi"
 		portraits={
 			army={
@@ -243,6 +243,31 @@ characters={
 			}
 		}
 	}
+
+	IRQ_mustafa_al_fangan={
+		advisor={
+			cost = 100
+
+			slot = theorist
+			idea_token = IRQ_mustafa_al_fangan
+			ledger = army
+				allowed = {
+					original_tag = IRQ
+				}
+
+				traits = {
+					military_theorist
+				}
+		}
+		name="Mustafa al-Fangan"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_arab_2"
+			}
+		}
+	}
+
+
 	IRQ_hamdi_al_pachachi={
 		advisor={
 			

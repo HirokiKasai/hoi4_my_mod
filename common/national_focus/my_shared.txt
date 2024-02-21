@@ -933,6 +933,10 @@
 
 		ai_will_do = {
 			factor = 15
+			modifier = {
+				factor = 0
+				date < 1936.7.1
+			}
 		}
 
 		available_if_capitulated = yes
@@ -1558,26 +1562,17 @@
 			add_tech_bonus = {
 				name = artillery
 				bonus = 1.0
-				ahead_reduction = 8
-				uses = 8
+				ahead_reduction = 4
+				uses = 2
 				category = artillery
 				category = anti_air
 				category = anti_tank
 			}
 			add_tech_bonus = {
-				name = secret_bonus
-				bonus = 1.0
-				ahead_reduction = 8
-				uses = 4
-				category = jet_technology
-				category = rocketry
-				category = electronics
-			}
-			add_tech_bonus = {
 				name = armor_bonus
 				bonus = 1.0
-				ahead_reduction = 8
-				uses = 4
+				ahead_reduction = 4
+				uses = 2
 				category = armor
 			}
 			add_ideas = MY_future_design_1
@@ -1607,8 +1602,8 @@
 			add_tech_bonus = {
 				name = air_bonus
 				bonus = 1.0
-				ahead_reduction = 8
-				uses = 12
+				ahead_reduction = 4
+				uses = 2
 				category = air_equipment
 			}
 			swap_ideas = {
@@ -1642,10 +1637,10 @@
 			add_tech_bonus = {
 				name = ships_bonus
 				bonus = 1.0
-				ahead_reduction = 8
-				uses = 4
+				ahead_reduction = 4
+				uses = 2
 				category = naval_equipment
-			}	
+			}
 			swap_ideas = {
 				remove_idea = MY_future_design_2
 				add_idea = MY_future_design_3
