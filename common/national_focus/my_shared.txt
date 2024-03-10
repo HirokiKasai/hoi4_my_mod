@@ -1354,6 +1354,13 @@
 
 		ai_will_do = {
 			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
 		}
 
 		available_if_capitulated = yes
@@ -1400,6 +1407,13 @@
 
 		ai_will_do = {
 			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
 		}
 
 		available_if_capitulated = yes
@@ -1446,6 +1460,13 @@
 
 		ai_will_do = {
 			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
 		}
 
 		available_if_capitulated = yes
@@ -1492,6 +1513,13 @@
 
 		ai_will_do = {
 			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
 		}
 
 		available_if_capitulated = yes

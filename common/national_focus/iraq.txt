@@ -152,9 +152,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 40
+
 			modifier = {
 				factor = 0
-				date < 1937.1.1
+				OR = {
+					has_war = yes
+					date < 1937.1.1
+				}
 			}
 		}
 		
