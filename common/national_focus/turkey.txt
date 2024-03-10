@@ -44,7 +44,7 @@ focus_tree = {
 			ENG = { country_event = { id = bftb_turkey.1 } }
 			custom_effect_tooltip = TUR_the_montreux_convention_tt
 
-            add_ideas = MY_communism_army
+            add_ideas = MY_pp_army
             if = {
                 limit = {
                     IRQ = {

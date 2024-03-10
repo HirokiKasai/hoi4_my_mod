@@ -88,15 +88,6 @@
 
 		ai_will_do = {
 			factor = 80
-
-			modifier = {
-				factor = 0
-				NOT = {
-					OR = {
-						tag = IRQ
-					}
-				}
-			}
 		}
 
 		available_if_capitulated = yes
@@ -109,14 +100,14 @@
 				limit = {
 					original_research_slots < 3
 				}
-				add_research_slot = 3
+				add_research_slot = 2
 				add_ideas = MY_future_knowledge
 			}
 			if = {
 				limit = {
 					original_research_slots > 2
 				}
-				add_research_slot = 2
+				add_research_slot = 1
 				add_ideas = MY_future_knowledge
 			}
 		}
@@ -134,7 +125,7 @@
 		x = -3
 		y = 1
 		relative_position_id = MY_future_knowledge
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -191,7 +182,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_investment
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -249,7 +240,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_investment_2
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -306,7 +297,7 @@
 		x = -1
 		y = 1
 		relative_position_id = MY_future_knowledge
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -362,7 +353,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_local_development
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -418,7 +409,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_local_development_2
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -475,7 +466,7 @@
 		x = -5
 		y = 1
 		relative_position_id = MY_future_knowledge
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -537,7 +528,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_dockyard
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -599,7 +590,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_dockyard_2
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -660,7 +651,7 @@
 		x = 3
 		y = 1
 		relative_position_id = MY_future_knowledge
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -676,7 +667,7 @@
 				}
 				add_resource = {
 					type = steel
-					amount = 172
+					amount = 262
 				}
 			}
 		    random_owned_controlled_state = {
@@ -698,7 +689,7 @@
 		x = -2
 		y = 1
 		relative_position_id = MY_search_resource_steel
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -737,7 +728,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_search_resource_steel
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -767,7 +758,7 @@
 		x = 2
 		y = 1
 		relative_position_id = MY_search_resource_steel
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -799,7 +790,7 @@
 		x = 0
 		y = 2
 		relative_position_id = MY_search_resource_steel
-		cost = 3
+		cost = 2
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -928,7 +919,7 @@
 		x = 10
 		y = 1
 		relative_position_id = MY_future_knowledge
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -976,7 +967,7 @@
 		x = -3
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1061,7 +1052,7 @@
 		x = -1
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1146,7 +1137,7 @@
 		x = 1
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1231,7 +1222,7 @@
 		x = 3
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1321,7 +1312,7 @@
 		x = 0
 		y = 2
 		relative_position_id = MY_the_volunteer
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1358,28 +1349,37 @@
 			focus = MY_populism
 			focus = MY_absolutism
 		}
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 10
-			
-			modifier = {
-				factor = 0
-				OR = {
-					tag = IRQ
-					tag = SWE
-					tag = BEL
-					tag = JAP
-				}
-			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = MY_communism
-			add_ideas = MY_communism_army
+			add_ideas = MY_empty_country_resource
+			add_timed_idea = {
+				idea = MY_three_year_development
+				days = 1095
+			}
+
+			if = {
+                limit = {
+                    NOT = { has_government = communism }
+                }
+                add_timed_idea = {
+                    idea = MY_protect_own_country
+                    days = 365
+                }
+                start_civil_war = {
+                    ruling_party = communism
+                    ideology = ROOT
+                    size = 0.4
+                }
+            }
 		}
 	}
 
@@ -1395,31 +1395,37 @@
 			focus = MY_populism
 			focus = MY_absolutism
 		}
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 10
-
-			modifier = {
-				factor = 0
-				OR = {
-					tag = IRQ
-					tag = SWE
-					tag = BEL
-					tag = JAP
-				}
-			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = MY_fascism
+			add_ideas = MY_empty_country_resource
 			add_timed_idea = {
-				idea = MY_absolutism_early_production
-				days = 365
+				idea = MY_three_year_development
+				days = 1095
 			}
+
+			if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                add_timed_idea = {
+                    idea = MY_protect_own_country
+                    days = 365
+                }
+                start_civil_war = {
+                    ruling_party = fascism
+                    ideology = ROOT
+                    size = 0.4
+                }
+            }
 		}
 	}
 
@@ -1435,30 +1441,36 @@
 			focus = MY_communism
 			focus = MY_absolutism
 		}
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 10
-
-			modifier = {
-				factor = 0
-				OR = {
-					tag = IRQ
-					tag = SWE
-					tag = BEL
-					tag = JAP
-				}
-			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = MY_populism
-            add_timed_idea = {
-                idea = MY_populism_early_production
-                days = 365
+			add_ideas = MY_empty_country_resource
+			add_timed_idea = {
+				idea = MY_three_year_development
+				days = 1095
+			}
+
+			if = {
+                limit = {
+                    NOT = { has_government = democratic }
+                }
+                add_timed_idea = {
+                    idea = MY_protect_own_country
+                    days = 365
+                }
+                start_civil_war = {
+                    ruling_party = democratic
+                    ideology = ROOT
+                    size = 0.4
+                }
             }
 		}
 	}
@@ -1475,35 +1487,37 @@
 			focus = MY_communism
 			focus = MY_populism
 		}
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 10
-
-			modifier = {
-				factor = 0
-				OR = {
-					# tag = IRQ
-					tag = SWE
-					tag = BEL
-					tag = JAP
-				}
-			}
 		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = MY_absolutism
+			add_ideas = MY_empty_country_resource
 			add_timed_idea = {
-				idea = MY_absolutism_early_production
-				days = 365
+				idea = MY_three_year_development
+				days = 1095
 			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
+
+			if = {
+                limit = {
+                    NOT = { has_government = neutrality }
+                }
+                add_timed_idea = {
+                    idea = MY_protect_own_country
+                    days = 365
+                }
+                start_civil_war = {
+                    ruling_party = neutrality
+                    ideology = ROOT
+                    size = 0.4
+                }
+            }
 		}
 	}
 
@@ -1519,7 +1533,7 @@
 		x = 1
 		y = 1
 		relative_position_id = MY_fascism
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1549,7 +1563,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_war_plan
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1572,7 +1586,7 @@
 				name = armor_bonus
 				bonus = 1.0
 				ahead_reduction = 4
-				uses = 2
+				uses = 1
 				category = armor
 			}
 			add_ideas = MY_future_design_1
@@ -1589,7 +1603,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_future_army_design
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1602,8 +1616,8 @@
 			add_tech_bonus = {
 				name = air_bonus
 				bonus = 1.0
-				ahead_reduction = 4
-				uses = 2
+				ahead_reduction = 8
+				uses = 6
 				category = air_equipment
 			}
 			swap_ideas = {
@@ -1624,7 +1638,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_future_air_design
-		cost = 3
+		cost = 2
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1641,6 +1655,13 @@
 				uses = 2
 				category = naval_equipment
 			}
+            add_tech_bonus = {
+                category = radar_tech
+                name = bruneval_raid
+                bonus = 4
+				ahead_reduction = 8
+                uses = 6
+            }
 			swap_ideas = {
 				remove_idea = MY_future_design_2
 				add_idea = MY_future_design_3

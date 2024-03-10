@@ -200,6 +200,7 @@ ideas = {
 
 			modifier = {
 				naval_equipment_upgrade_xp_cost = -0.5
+				convoy_escort_efficiency = 0.25
 			}
 			
 			equipment_bonus = {
@@ -238,58 +239,8 @@ ideas = {
 			
 			modifier = {
 				communism_drift = 0.5
- 				consumer_goods_factor = -0.1
-				operative_slot = 3
-				dig_in_speed = 0.25
-				terrain_penalty_reduction = 0.5
-			}
-		}
-
-
-		MY_communism_army = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_communism_drift_bonus
-
-			removal_cost = -1
-
-			rule = {
-				can_create_factions = yes
-			}
-
-			modifier = {
-				weekly_manpower = 10000
-				army_infantry_defence_factor = 0.25
-			}
-		}
-
-
-		MY_protect_own_country = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			picture = generic_communism_drift_bonus
-
-			removal_cost = -1
-
-			modifier = {
-				army_attack_factor = -0.25
-				army_core_attack_factor = 0.25
-				army_core_defence_factor = 0.5
-				join_faction_tension = -0.8
+                operative_slot = 3
+                own_operative_detection_chance_factor = -0.5
 			}
 		}
 
@@ -310,11 +261,7 @@ ideas = {
 			
 			modifier = {
 				fascism_drift = 0.5
- 				production_speed_buildings_factor = 0.25
- 				conscription = 0.05
- 				special_forces_cap = 0.25
- 				special_forces_attack_factor = 0.25
- 				special_forces_defence_factor = 0.25
+				conscription = 0.05
 			}
 		}
 
@@ -335,40 +282,8 @@ ideas = {
 			
 			modifier = {
 				democratic_drift = 0.5
-				consumer_goods_factor = 0.3
-				production_speed_industrial_complex_factor = 1
-				industrial_capacity_factory = 0.5
-				industrial_capacity_dockyard = 0.5
-				production_factory_start_efficiency_factor = 0.5
-			}
-		}
-
-
-		MY_populism_early_production = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = democratic
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_democratic_drift_bonus
-
-			modifier = {
-				stability_weekly = 0.01
-				war_support_weekly = 0.01
-				political_power_factor = 1
-				consumer_goods_factor = -0.4
-				production_speed_arms_factory_factor = 1
-				military_leader_cost_factor = -0.90
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.2
 			}
 		}
 
@@ -393,39 +308,9 @@ ideas = {
 			
 			modifier = {
 				neutrality_drift = 0.5
-				local_resources_factor = 1
-				max_marshal_army_size = 1
+				local_resources_factor = 0.5
 			}
 		}
-
-
-		MY_absolutism_early_production = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_intel_bonus
-			
-			modifier = {
- 				research_speed_factor = 0.5
-				stability_weekly = 0.01
-				war_support_weekly = 0.01
-				industrial_capacity_factory = 1
-				production_speed_buildings_factor = 1
-			}
-		}
-
 
 		MY_war_plan = {
 		
@@ -442,11 +327,106 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				training_time_factor = -0.5
 				send_volunteers_tension = -1
 				justify_war_goal_time = -0.50
 				generate_wargoal_tension = -0.5
 				military_leader_cost_factor = -0.90
-				intelligence_agency_defense = 10
+			}
+		}
+
+
+		MY_three_year_development = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_hyper_inflation5
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.5
+ 				production_speed_buildings_factor = 1
+				industrial_capacity_factory = 1
+				production_factory_start_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+                training_time_factor = -0.5
+				consumer_goods_factor = -0.5
+			}
+		}
+
+
+		MY_empty_country_resource = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ROM_king_carol_emptied_accounts
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_arms_factory_factor = -0.5
+				production_speed_industrial_complex_factor = -0.5
+			}
+		}
+
+
+		MY_pp_army = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+
+			removal_cost = -1
+
+			rule = {
+				can_create_factions = yes
+			}
+
+			modifier = {
+				weekly_manpower = 10000
+				army_infantry_defence_factor = 0.25
+			}
+		}
+
+
+		MY_protect_own_country = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = YUG_federal_defense_council
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.25
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.5
+				join_faction_tension = -0.8
 			}
 		}
 
@@ -2119,6 +2099,16 @@ ideas = {
 			}
 			
 			traits = { convoy_escort_naval_manufacturer }
+            equipment_bonus = {
+                carrier = {
+                    build_cost_ic = -0.25
+                    sortie_efficiency = 0.25
+                }
+                screen_ship = {
+                    build_cost_ic = -0.35
+                    sub_detection = 0.4
+                }
+            }
 		}
 		
 		my_sasebo_naval_arsenal = {

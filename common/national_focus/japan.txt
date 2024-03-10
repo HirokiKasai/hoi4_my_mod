@@ -1058,6 +1058,33 @@
 					mark_focus_tree_layout_dirty = yes
 				}
 			}
+
+			transfer_state = 655
+			transfer_state = 422
+			transfer_state = 733
+			JAP = {
+                puppet = INS
+                puppet = AST
+                puppet = NZL
+				annex_country = {
+                    target = PHI
+                    transfer_troops = yes
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = ROOT
+                    }
+                    add_core_of = ROOT
+                }
+			}
+			USA = {
+                add_ideas = MY_bureau_of_ships_focus
+			}
+			ENG = {
+                add_to_faction = USA
+                add_to_faction = FRA
+			}
+
 		}
 	}
 
@@ -1124,32 +1151,7 @@
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = JAP_greater_east_asian_co_prosperity_sphere
-			transfer_state = 655
-			transfer_state = 422
-			transfer_state = 733
-			JAP = {
-                puppet = INS
-                puppet = AST
-                puppet = NZL
-				annex_country = {
-                    target = PHI
-                    transfer_troops = yes
-                }
-                every_state = {
-                    limit = {
-                        is_owned_by = ROOT
-                    }
-                    add_core_of = ROOT
-                }
-				add_to_faction = SIA
-			}
-			USA = {
-                add_ideas = MY_bureau_of_ships_focus
-			}
-			ENG = {
-                add_to_faction = USA
-                add_to_faction = FRA
-			}
+			add_to_faction = SIA
 		}
 	}
 
@@ -2346,7 +2348,7 @@
 				limit = {	
 					has_war_support < 0.5
 				}
-				add_war_support = 0.1
+				add_war_support = 0.25
 			}
 			else_if = {
 				limit = {
@@ -2771,6 +2773,33 @@
 					mark_focus_tree_layout_dirty = yes
 				}
 			}
+
+			transfer_state = 655
+			transfer_state = 422
+			transfer_state = 733
+			JAP = {
+                puppet = INS
+                puppet = AST
+                puppet = NZL
+				annex_country = {
+                    target = PHI
+                    transfer_troops = yes
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = ROOT
+                    }
+                    add_core_of = ROOT
+                }
+			}
+			USA = {
+                add_ideas = MY_bureau_of_ships_focus
+			}
+			ENG = {
+                add_to_faction = USA
+                add_to_faction = FRA
+			}
+
 		}
 	}
 
@@ -4492,90 +4521,6 @@
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-		    714 = {
-				add_resource = {
-					type = oil
-					amount = 160
-				}
-				add_resource = {
-					type = steel
-					amount = 278
-				}
-		    }
-			MAN = {				
-				add_stability = 0.25
-				add_war_support = 0.25
-				add_political_power = 300
-				annex_country = {
-                    target = MEN
-                    transfer_troops = yes
-                }
-                add_ideas = MY_all_in
-                add_ideas = MY_fascism
-                add_timed_idea = {
-                    idea = MY_absolutism_early_production
-                    days = 365
-                }
-                add_research_slot = 2
-                add_manpower = 5000000
-                add_offsite_building = { type = industrial_complex level = 20 }
-                add_equipment_to_stockpile = {
-                    type = infantry_equipment
-                    amount = 30000
-                    producer = JAP
-                }
-                every_owned_state = {
-                    limit = {
-                        is_controlled_by = MAN
-                    }
-                    add_extra_state_shared_building_slots = 10
-                    add_building_construction = {
-                        type = infrastructure
-                        level = 2
-                        instant_build = yes
-                    }
-                }
-                every_state = {
-                    limit = {
-                        is_owned_by = MAN
-                    }
-                    add_core_of = MAN
-                }
-			}
-			SIA = {
-				add_stability = 0.25
-				add_war_support = 0.25
-				add_political_power = 300
-			    transfer_state = 670
-			    transfer_state = 671
-			    transfer_state = 741
-			    transfer_state = 286
-			    transfer_state = 336
-			    add_state_core = 288
-			    add_state_core = 640
-                every_state = {
-                    limit = {
-                        is_owned_by = SIA
-                    }
-                    add_core_of = SIA
-                }
-                add_equipment_to_stockpile = {
-                    type = infantry_equipment
-                    amount = 10000
-                    producer = JAP
-                }
-                every_owned_state = {
-                    limit = {
-                        is_controlled_by = PREV
-                    }
-                    add_extra_state_shared_building_slots = 10
-                    add_building_construction = {
-                        type = infrastructure
-                        level = 2
-                        instant_build = yes
-                    }
-                }
-			}
 		}
 	}
 
@@ -4927,7 +4872,7 @@
 		y = 0
 		relative_position_id = JAP_the_manchurian_project 
 
-		cost = 10
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -4938,7 +4883,11 @@
 		}
 
 		available = {
-
+			MAN = {
+				add_stability = 0.25
+				add_war_support = 0.25
+				add_political_power = 300
+			}
 		}
 
 		bypass = {
@@ -4952,6 +4901,125 @@
 
 		completion_reward = {
 			army_experience = 30
+		    714 = {
+				add_resource = {
+					type = oil
+					amount = 160
+				}
+				add_resource = {
+					type = steel
+					amount = 278
+				}
+		    }
+			MAN = {
+				annex_country = {
+                    target = MEN
+                    transfer_troops = yes
+                }
+                add_ideas = MY_all_in
+                add_ideas = MY_fascism
+                add_timed_idea = {
+                    idea = MY_absolutism_early_production
+                    days = 365
+                }
+                add_research_slot = 2
+                add_manpower = 5000000
+                add_offsite_building = { type = industrial_complex level = 20 }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 30000
+                    producer = JAP
+                }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = MAN
+                    }
+                    add_extra_state_shared_building_slots = 10
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = MAN
+                    }
+                    add_core_of = MAN
+                }
+			}
+			SIA = {
+				add_stability = 0.25
+				add_war_support = 0.25
+				add_political_power = 300
+			    transfer_state = 670
+			    transfer_state = 671
+			    transfer_state = 741
+			    transfer_state = 286
+			    transfer_state = 336
+			    transfer_state = 288
+			    transfer_state = 640
+                every_state = {
+                    limit = {
+                        is_owned_by = SIA
+                    }
+                    add_core_of = SIA
+                }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 10000
+                    producer = JAP
+                }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 10
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+			}
+
+            if = {
+                limit = {
+                    IRQ = {
+                        is_ai = no
+                    }
+                }
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 20 }
+                add_offsite_building = { type = arms_factory level = 20 }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = JAP
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                282 = {
+                    add_resource = {
+                        type = oil
+                        amount = 96
+                    }
+                    add_resource = {
+                        type = steel
+                        amount = 128
+                    }
+                    add_extra_state_shared_building_slots = 3
+                    add_building_construction = {
+                        type = synthetic_refinery
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+            }
 		}
 	}
 

@@ -50,7 +50,7 @@ focus_tree = {
 			}
 
             PER = {
-                add_ideas = MY_communism_army
+                add_ideas = MY_pp_army
                 add_ideas = MY_protect_own_country
 
                 create_faction = "OPEC"
@@ -101,7 +101,7 @@ focus_tree = {
 
 
             AFG = {
-                add_ideas = MY_communism_army
+                add_ideas = MY_pp_army
                 add_ideas = MY_protect_own_country
 
                 add_research_slot = 2
@@ -134,7 +134,7 @@ focus_tree = {
 
 
             TUR = {
-                add_ideas = MY_communism_army
+                add_ideas = MY_pp_army
                 add_ideas = MY_protect_own_country
             }
 		}
