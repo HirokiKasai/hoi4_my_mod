@@ -356,7 +356,6 @@ ideas = {
 				industrial_capacity_factory = 1
 				production_factory_start_efficiency_factor = 0.25
 				production_factory_efficiency_gain_factor = 0.25
-                training_time_factor = -0.5
 				consumer_goods_factor = -0.5
 			}
 		}
