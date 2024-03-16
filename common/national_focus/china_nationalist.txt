@@ -2406,6 +2406,6 @@
 			unlock_decision_tooltip = CHI_forced_loans
 		}
 	}
-	shared_focus = MY_prophecy		
+	shared_focus = MY_god_message
 
 }

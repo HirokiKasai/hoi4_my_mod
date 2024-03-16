@@ -1,0 +1,406 @@
+﻿#	shared_focus = {
+#		id = MCAS_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+
+
+
+	# ==================================================================================
+	#
+	#  MY CENTRAL ASIA SHARED FOCUS
+	#
+	# ==================================================================================
+
+	shared_focus = {
+		id = MCAS_greater_country
+		icon = GFX_focus_generic_treaty
+		mutually_exclusive = {
+			focus = MCAS_development_country
+		}
+		x = 18
+		y = 0
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_war_support = 0.1
+			add_political_power = 150
+			army_experience = 100
+		}
+	}
+
+
+	# ==================================================================================
+	#  MANPOWER_DOCTRINE
+	# ==================================================================================
+
+	shared_focus = {
+		id = MCAS_get_army_weapons
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = MCAS_greater_country }
+		relative_position_id = MCAS_greater_country
+		x = -2
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 10000
+                producer = SOV
+            }
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_get_army_weapons_2
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = MCAS_get_army_weapons }
+		relative_position_id = MCAS_get_army_weapons
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 10000
+                producer = GER
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 3000
+                producer = GER
+            }
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_get_army_weapons_3
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = MCAS_get_army_weapons_2 }
+		relative_position_id = MCAS_get_army_weapons_2
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_war_support = 0.1
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 10000
+                producer = ENG
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 3000
+                producer = ENG
+            }
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_manpower_doctrine
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = MCAS_greater_country }
+		relative_position_id = MCAS_greater_country
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_manpower = 300000
+            add_ideas = MCAS_manpower_doctrine
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_manpower_doctrine_2
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = MCAS_manpower_doctrine }
+		relative_position_id = MCAS_manpower_doctrine
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MCAS_manpower_doctrine
+				add_idea = MCAS_manpower_doctrine_2
+			}
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_manpower_doctrine_3
+		icon = GFX_goal_rhineland
+		prerequisite = { focus = MCAS_manpower_doctrine_2 }
+		relative_position_id = MCAS_manpower_doctrine_2
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = MCAS_manpower_doctrine_2
+				add_idea = MCAS_manpower_doctrine_3
+			}
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_local_development
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MCAS_greater_country }
+		relative_position_id = MCAS_greater_country
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_local_development_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MCAS_local_development }
+		relative_position_id = MCAS_local_development
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_local_development_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = MCAS_local_development_2 }
+		relative_position_id = MCAS_local_development_2
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		    random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		    random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_we_are_imperial_army
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		prerequisite = { focus = MCAS_get_army_weapons_3 }
+		prerequisite = { focus = MCAS_manpower_doctrine_3 }
+		prerequisite = { focus = MCAS_local_development_3 }
+		relative_position_id = MCAS_manpower_doctrine_3
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_stability = 0.25
+            add_ideas = MY_protect_own_country
+		}
+	}
+
+	shared_focus = {
+		id = MCAS_we_are_imperial_army_2
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = MCAS_we_are_imperial_army }
+		relative_position_id = MCAS_we_are_imperial_army
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MY_protect_own_country
+				add_idea = MY_protect_own_country_2
+			}
+		}
+	}
+
+
+
+	# ==================================================================================
+	#  PRODUCTION_DOCTRINE
+	# ==================================================================================
+
+

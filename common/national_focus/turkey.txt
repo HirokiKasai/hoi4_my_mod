@@ -9894,5 +9894,5 @@ focus_tree = {
 		}
 	}
 
-	shared_focus = MY_prophecy
+	shared_focus = MY_god_message
 }

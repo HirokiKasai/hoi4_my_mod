@@ -48,11 +48,11 @@
 	# ==================================================================================
 
 	shared_focus = {
-		id = MY_prophecy
-		icon = GFX_focus_generic_treaty
-		x = 5
+		id = MY_god_message
+		icon = GFX_goal_generic_propaganda
+		x = 14
 		y = 15
-		cost = 1
+		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -72,6 +72,32 @@
 
 		completion_reward = {
 			add_political_power = 250
+		}
+	}
+
+
+
+	# ==================================================================================
+	#  MY FOCUS - Research
+	# ==================================================================================
+
+	shared_focus = {
+		id = MY_prophecy
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = MY_god_message }
+		x = -11
+		y = 1
+		relative_position_id = MY_god_message
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
 			add_ideas = MY_prophecy
 		}
 	}
@@ -81,9 +107,9 @@
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = MY_prophecy }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = MY_prophecy
-		cost = 1
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -93,9 +119,6 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 25
-			navy_experience = 25
-			air_experience = 25
 			if = {
 				limit = {
 					original_research_slots < 3
@@ -119,13 +142,13 @@
 	# ==================================================================================
 
 	shared_focus = {
-		id = MY_investment
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = MY_future_knowledge }
-		x = -3
+		id = MY_priority_to_the_factory
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = MY_god_message }
+		x = -6
 		y = 1
-		relative_position_id = MY_future_knowledge
-		cost = 2
+		relative_position_id = MY_god_message
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -135,7 +158,44 @@
 		available_if_capitulated = yes
 
         bypass = {
-			custom_trigSWE_tooltip = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+            add_tech_bonus = {
+                bonus = 1
+                uses = 2
+                category = construction_tech
+            }
+		}
+	}
+
+	shared_focus = {
+		id = MY_investment
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = MY_priority_to_the_factory }
+		x = -2
+		y = 1
+		relative_position_id = MY_priority_to_the_factory
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+        bypass = {
+			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
 				all_owned_state = {			
 					free_building_slots = {
@@ -152,15 +212,9 @@
 				level = 1
 				instant_build = yes
 			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
 		}
 
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 2 }
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -177,12 +231,12 @@
 
 	shared_focus = {
 		id = MY_investment_2
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = MY_investment }
 		x = 0
 		y = 1
 		relative_position_id = MY_investment
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -192,7 +246,7 @@
 		available_if_capitulated = yes
 		
         bypass = {
-			custom_trigSWE_tooltip = {
+			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
 				all_owned_state = {			
 					free_building_slots = {
@@ -222,7 +276,6 @@
 				limit = {
 					is_controlled_by = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -235,12 +288,12 @@
 
 	shared_focus = {
 		id = MY_investment_3
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = MY_investment_2 }
 		x = 0
 		y = 1
 		relative_position_id = MY_investment_2
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -250,7 +303,7 @@
 		available_if_capitulated = yes
 		
         bypass = {
-			custom_trigSWE_tooltip = {
+			custom_trigger_tooltip = {
 				tooltip = infrastructure_effort_tt
 				all_owned_state = {			
 					free_building_slots = {
@@ -275,7 +328,6 @@
 		}
 
 		completion_reward = {
-			add_offsite_building = { type = industrial_complex level = 2 }
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -293,11 +345,11 @@
 	shared_focus = {
 		id = MY_local_development
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = MY_future_knowledge }
-		x = -1
+		prerequisite = { focus = MY_priority_to_the_factory }
+		x = 0
 		y = 1
-		relative_position_id = MY_future_knowledge
-		cost = 2
+		relative_position_id = MY_priority_to_the_factory
+		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -353,7 +405,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_local_development
-		cost = 2
+		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -404,12 +456,12 @@
 
 	shared_focus = {
 		id = MY_local_development_3
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = MY_local_development_2 }
 		x = 0
 		y = 1
 		relative_position_id = MY_local_development_2
-		cost = 2
+		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -462,11 +514,11 @@
 	shared_focus = {
 		id = MY_dockyard
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = MY_future_knowledge }
-		x = -5
+		prerequisite = { focus = MY_priority_to_the_factory }
+		x = 2
 		y = 1
-		relative_position_id = MY_future_knowledge
-		cost = 2
+		relative_position_id = MY_priority_to_the_factory
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -528,7 +580,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_dockyard
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -590,7 +642,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_dockyard_2
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -638,174 +690,6 @@
 			}
 		}
 	}
-
-
-	# ==================================================================================
-	#  MY FOCUS - Economy Support
-	# ==================================================================================
-
-	shared_focus = {
-		id = MY_search_resource_steel
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = MY_future_knowledge }
-		x = 3
-		y = 1
-		relative_position_id = MY_future_knowledge
-		cost = 2
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = steel
-					amount = 262
-				}
-			}
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = tungsten
-					amount = 32
-				}
-			}
-		}
-	}
-
-	shared_focus = {
-		id = MY_search_resource_aluminium
-		icon = GFX_focus_generic_aluminum
-		prerequisite = { focus = MY_search_resource_steel }
-		x = -2
-		y = 1
-		relative_position_id = MY_search_resource_steel
-		cost = 2
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = aluminium
-					amount = 128
-				}
-			}
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = chromium
-					amount = 26
-				}
-			}
-		}
-	}
-
-
-	shared_focus = {
-		id = MY_search_resource_oil
-		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = MY_search_resource_steel }
-		x = 0
-		y = 1
-		relative_position_id = MY_search_resource_steel
-		cost = 2
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = oil
-					amount = 68
-				}
-			}
-		}
-	}
-
-
-	shared_focus = {
-		id = MY_search_resource_rubber
-		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = MY_search_resource_steel }
-		x = 2
-		y = 1
-		relative_position_id = MY_search_resource_steel
-		cost = 2
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = rubber
-					amount = 56
-				}
-			}
-		}
-	}
-
-
-	shared_focus = {
-		id = MY_from_cradle_to_graveyard
-		icon = GFX_focus_usa_guarantee_the_american_dream
-		prerequisite = { focus = MY_search_resource_oil }
-		prerequisite = { focus = MY_search_resource_aluminium }
-		prerequisite = { focus = MY_search_resource_rubber }
-		x = 0
-		y = 2
-		relative_position_id = MY_search_resource_steel
-		cost = 2
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = MY_from_cradle_to_graveyard
-		}
-	}
-
-
-
 	# ==================================================================================
 	#  MY FOCUS - Economy And Development Complete 
 	# ==================================================================================
@@ -815,8 +699,8 @@
 		icon = GFX_focus_spa_the_spanish_miracle
 		prerequisite = { focus = MY_investment_3 }
 		prerequisite = { focus = MY_local_development_3 }
-		prerequisite = { focus = MY_from_cradle_to_graveyard }
-		x = 4
+		prerequisite = { focus = MY_bureau_of_ships_focus }
+		x = 0
 		y = 1
 		relative_position_id = MY_local_development_3
 		cost = 10
@@ -908,18 +792,188 @@
 
 
 
+
+	# ==================================================================================
+	#  MY FOCUS - Economy Support
+	# ==================================================================================
+
+	shared_focus = {
+		id = MY_search_resource_steel
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = MY_miracle_development }
+		x = 0
+		y = 1
+		relative_position_id = MY_miracle_development
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+			        is_core_of = ROOT
+				}
+				add_resource = {
+					type = steel
+					amount = 262
+				}
+			}
+		    random_owned_controlled_state = {
+				limit = {
+			        is_core_of = ROOT
+				}
+				add_resource = {
+					type = tungsten
+					amount = 32
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = MY_search_resource_aluminium
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = MY_search_resource_steel }
+		x = -2
+		y = 1
+		relative_position_id = MY_search_resource_steel
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+			        is_core_of = ROOT
+				}
+				add_resource = {
+					type = aluminium
+					amount = 128
+				}
+			}
+		    random_owned_controlled_state = {
+				limit = {
+			        is_core_of = ROOT
+				}
+				add_resource = {
+					type = chromium
+					amount = 26
+				}
+			}
+		}
+	}
+
+
+	shared_focus = {
+		id = MY_search_resource_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = MY_search_resource_steel }
+		x = 0
+		y = 1
+		relative_position_id = MY_search_resource_steel
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+			        is_core_of = ROOT
+				}
+				add_resource = {
+					type = oil
+					amount = 68
+				}
+			}
+		}
+	}
+
+
+	shared_focus = {
+		id = MY_search_resource_rubber
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = MY_search_resource_steel }
+		x = 2
+		y = 1
+		relative_position_id = MY_search_resource_steel
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+			        is_core_of = ROOT
+				}
+				add_resource = {
+					type = rubber
+					amount = 56
+				}
+			}
+		}
+	}
+
+
+	shared_focus = {
+		id = MY_from_cradle_to_graveyard
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		prerequisite = { focus = MY_search_resource_oil }
+		prerequisite = { focus = MY_search_resource_aluminium }
+		prerequisite = { focus = MY_search_resource_rubber }
+		x = 0
+		y = 2
+		relative_position_id = MY_search_resource_steel
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = MY_from_cradle_to_graveyard
+		}
+	}
+
+
+
+
+
+
 	# ==================================================================================
 	#  MY FOCUS - War Support
 	# ==================================================================================
 
 	shared_focus = {
 		id = MY_the_volunteer
-		icon = GFX_focus_generic_milJAPry_mission
-		prerequisite = { focus = MY_future_knowledge }
-		x = 10
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = MY_god_message }
+		x = 2
 		y = 1
-		relative_position_id = MY_future_knowledge
-		cost = 2
+		relative_position_id = MY_god_message
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -967,7 +1021,7 @@
 		x = -3
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1052,7 +1106,7 @@
 		x = -1
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1137,7 +1191,7 @@
 		x = 1
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1222,7 +1276,7 @@
 		x = 3
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1312,7 +1366,7 @@
 		x = 0
 		y = 2
 		relative_position_id = MY_the_volunteer
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1338,18 +1392,13 @@
 	# ==================================================================================
 
 	shared_focus = {
-		id = MY_communism
-		icon = GFX_goal_support_communism
-		prerequisite = { focus = MY_future_knowledge }
-		x = 15
+		id = MY_three_year_development
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = MY_god_message }
+		x = 11
 		y = 1
-		relative_position_id = MY_future_knowledge
-		mutually_exclusive = {
-			focus = MY_fascism
-			focus = MY_populism
-			focus = MY_absolutism
-		}
-		cost = 2
+		relative_position_id = MY_god_message
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1366,13 +1415,75 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = MY_communism
 			add_ideas = MY_empty_country_resource
 			add_timed_idea = {
 				idea = MY_three_year_development
 				days = 1095
 			}
+		}
+	}
 
+	shared_focus = {
+		id = MY_communism
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = MY_three_year_development }
+		x = -3
+		y = 1
+		relative_position_id = MY_three_year_development
+		mutually_exclusive = {
+			focus = MY_fascism
+			focus = MY_populism
+			focus = MY_absolutism
+		}
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.2
+            }
+			add_ideas = MY_communism
+		}
+	}
+
+	shared_focus = {
+		id = MY_communism_2
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = MY_communism }
+		x = 0
+		y = 1
+		relative_position_id = MY_communism
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
 			if = {
                 limit = {
                     NOT = { has_government = communism }
@@ -1384,8 +1495,11 @@
                 start_civil_war = {
                     ruling_party = communism
                     ideology = ROOT
-                    size = 0.4
+                    size = 0.45
                 }
+            }
+            else = {
+            	add_stability = 0.1
             }
 		}
 	}
@@ -1393,16 +1507,16 @@
 	shared_focus = {
 		id = MY_fascism
 		icon = GFX_focus_generic_support_the_left_right
-		prerequisite = { focus = MY_future_knowledge }
-		x = 17
+		prerequisite = { focus = MY_three_year_development }
+		x = -1
 		y = 1
-		relative_position_id = MY_future_knowledge
+		relative_position_id = MY_three_year_development
 		mutually_exclusive = {
 			focus = MY_communism
 			focus = MY_populism
 			focus = MY_absolutism
 		}
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1419,13 +1533,38 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.2
+            }
 			add_ideas = MY_fascism
-			add_ideas = MY_empty_country_resource
-			add_timed_idea = {
-				idea = MY_three_year_development
-				days = 1095
-			}
+		}
+	}
 
+	shared_focus = {
+		id = MY_fascism_2
+		icon = GFX_goal_continuous_suppression
+		prerequisite = { focus = MY_fascism }
+		x = 0
+		y = 1
+		relative_position_id = MY_fascism
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
 			if = {
                 limit = {
                     NOT = { has_government = fascism }
@@ -1437,8 +1576,11 @@
                 start_civil_war = {
                     ruling_party = fascism
                     ideology = ROOT
-                    size = 0.4
+                    size = 0.45
                 }
+            }
+            else = {
+            	add_stability = 0.1
             }
 		}
 	}
@@ -1446,16 +1588,16 @@
 	shared_focus = {
 		id = MY_populism
 		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = MY_future_knowledge }
-		x = 19
+		prerequisite = { focus = MY_three_year_development }
+		x = 1
 		y = 1
-		relative_position_id = MY_future_knowledge
+		relative_position_id = MY_three_year_development
 		mutually_exclusive = {
 			focus = MY_fascism
 			focus = MY_communism
 			focus = MY_absolutism
 		}
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1472,13 +1614,38 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = MY_populism
-			add_ideas = MY_empty_country_resource
-			add_timed_idea = {
-				idea = MY_three_year_development
-				days = 1095
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
 			}
+			add_ideas = MY_populism
+		}
+	}
 
+	shared_focus = {
+		id = MY_populism_2
+		icon = GFX_goal_continuous_def_against_influence
+		prerequisite = { focus = MY_populism }
+		x = 0
+		y = 1
+		relative_position_id = MY_populism
+		cost = 5
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
 			if = {
                 limit = {
                     NOT = { has_government = democratic }
@@ -1490,25 +1657,28 @@
                 start_civil_war = {
                     ruling_party = democratic
                     ideology = ROOT
-                    size = 0.4
+                    size = 0.45
                 }
+            }
+            else = {
+            	add_stability = 0.1
             }
 		}
 	}
 
 	shared_focus = {
 		id = MY_absolutism
-		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = MY_future_knowledge }
-		x = 21
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = MY_three_year_development }
+		x = 3
 		y = 1
-		relative_position_id = MY_future_knowledge
+		relative_position_id = MY_three_year_development
 		mutually_exclusive = {
 			focus = MY_fascism
 			focus = MY_communism
 			focus = MY_populism
 		}
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1525,13 +1695,38 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = MY_absolutism
-			add_ideas = MY_empty_country_resource
-			add_timed_idea = {
-				idea = MY_three_year_development
-				days = 1095
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
 			}
+			add_ideas = MY_absolutism
+		}
+	}
 
+	shared_focus = {
+		id = MY_absolutism_2
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = MY_absolutism }
+		x = 0
+		y = 1
+		relative_position_id = MY_absolutism
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 10
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
 			if = {
                 limit = {
                     NOT = { has_government = neutrality }
@@ -1543,8 +1738,11 @@
                 start_civil_war = {
                     ruling_party = neutrality
                     ideology = ROOT
-                    size = 0.4
+                    size = 0.45
                 }
+            }
+            else = {
+            	add_stability = 0.1
             }
 		}
 	}
@@ -1553,15 +1751,15 @@
 		id = MY_war_plan
 		icon = GFX_focus_usa_build_the_pentagon
 		prerequisite = {
-			focus = MY_communism
-			focus = MY_fascism
-			focus = MY_populism
-			focus = MY_absolutism
+			focus = MY_communism_2
+			focus = MY_fascism_2
+			focus = MY_populism_2
+			focus = MY_absolutism_2
 		}
 		x = 1
 		y = 1
-		relative_position_id = MY_fascism
-		cost = 2
+		relative_position_id = MY_fascism_2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1591,7 +1789,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_war_plan
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1631,7 +1829,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_future_army_design
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1666,7 +1864,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_future_air_design
-		cost = 2
+		cost = 5
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1704,204 +1902,6 @@
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-	# ==================================================================================
-	#  MY FOCUS - World Editor
-	# ==================================================================================
-
-
-	shared_focus = {
-		id = MY_cheat_core
-		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = MY_prophecy }
-		x = 2
-		y = 1
-		relative_position_id = MY_prophecy
-		cost = 1
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_political_power = 500
-			add_manpower = 5000000
-		    random_owned_controlled_state = {
-				limit = {
-			        is_core_of = ROOT
-				}
-				add_resource = {
-					type = steel
-					amount = 246
-				}
-			}
-
-		    random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 8
-				add_building_construction = {
-					type = arms_factory
-					level = 6
-					instant_build = yes
-				}
-			}
-
-		    random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 8
-				add_building_construction = {
-					type = arms_factory
-					level = 6
-					instant_build = yes
-				}
-			}
-
-		    random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 8
-				add_building_construction = {
-					type = arms_factory
-					level = 6
-					instant_build = yes
-				}
-			}
-
-		    random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 8
-				add_building_construction = {
-					type = arms_factory
-					level = 6
-					instant_build = yes
-				}
-			}
-
-		    random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-				}
-				add_extra_state_shared_building_slots = 8
-				add_building_construction = {
-					type = arms_factory
-					level = 6
-					instant_build = yes
-				}
-			}
-			
-			every_state = {
-				limit = {
-					is_owned_by = ROOT
-				}
-				add_core_of = ROOT
-			}
-		}
-	}
-
-
-	shared_focus = {
-		id = MY_poland_defence_all
-		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = MY_prophecy }
-		x = 4
-		y = 1
-		relative_position_id = MY_prophecy
-		cost = 1
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			SOV = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-			ENG = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-			FRA = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-			ITA = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-			JAP = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-			USA = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-			IRQ = {
-				give_guarantee = POL
-                every_state = {
-                    limit = {
-                        is_owned_by = PREV
-                    }
-                    add_core_of = PREV
-                }
-			}
-		}
-	}
 
 
 

@@ -1,0 +1,567 @@
+﻿
+focus_tree = {
+	id = persia_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = PER
+		}
+	}
+	
+	default = no
+
+	initial_show_position = {
+		focus = PER_army_effort
+	}
+
+
+	# ==================================================================================
+	#
+	#  PERSIA FOCUS
+	#
+	# ==================================================================================
+
+	# ==================================================================================
+	#  PERSIA FOCUS - Political & OPEC
+	# ==================================================================================
+
+	focus = {
+		id = PER_political_power
+		icon = GFX_focus_generic_self_management
+		x = 4
+		y = 0
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 40
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 250
+		}
+	}
+
+	focus = {
+		id = PER_anti_iraq_operation
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = PER_political_power }
+		relative_position_id = PER_political_power
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 40
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.25
+			add_ideas = war_economy
+		}
+	}
+
+	focus = {
+		id = PER_stability_country
+		icon = GFX_goal_continuous_increase_nu
+		prerequisite = { focus = PER_anti_iraq_operation }
+		relative_position_id = PER_anti_iraq_operation
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.25
+		}
+	}
+
+	focus = {
+		id = PER_opec
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = PER_stability_country }
+		relative_position_id = PER_stability_country
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_ideas = ideological_fanaticism_focus
+            create_faction = "OPEC"
+            add_to_faction = AFG
+		}
+	}
+
+	focus = {
+		id = PER_opec_development_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PER_opec }
+		relative_position_id = PER_opec
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+                add_resource = {
+                    type = steel
+                    amount = 38
+                }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			AFG = {
+                every_owned_state = {
+                    limit = {
+                        AFG = { has_full_control_of_state = AFG }
+                        is_core_of = AFG
+                    }
+                    add_resource = {
+                        type = steel
+                        amount = 23
+                    }
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = PER_opec_development_plan_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PER_opec_development_plan }
+		relative_position_id = PER_opec_development_plan
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+                add_resource = {
+                    type = steel
+                    amount = 16
+                }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			AFG = {
+                random_owned_controlled_state = {
+                    limit = {
+                        AFG = { has_full_control_of_state = AFG }
+                        is_core_of = AFG
+                    }
+                    add_extra_state_shared_building_slots = 4
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = PER_opec_soviet_weapons
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = PER_opec }
+		relative_position_id = PER_opec
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 20000
+                producer = SOV
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 3000
+                producer = SOV
+            }
+
+			AFG = {
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 20000
+                    producer = SOV
+                }
+                add_equipment_to_stockpile = {
+                    type = artillery_equipment
+                    amount = 3000
+                    producer = SOV
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = PER_opec_soviet_items
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = PER_opec_soviet_weapons }
+		relative_position_id = PER_opec_soviet_weapons
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 3000
+                producer = SOV
+            }
+            add_equipment_to_stockpile = {
+                type = train_equipment
+                amount = 60
+                producer = SOV
+            }
+
+			AFG = {
+                add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = 3000
+                    producer = SOV
+                }
+                add_equipment_to_stockpile = {
+                    type = train_equipment
+                    amount = 60
+                    producer = SOV
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = PER_defensive_attack_to_iraq
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = PER_opec_development_plan_2 }
+		prerequisite = { focus = PER_opec_soviet_items }
+		relative_position_id = PER_opec_development_plan_2
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+					date < 1938.1.1
+				}
+			}
+		}
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+
+		available = {
+			NOT = { has_war_with = IRQ }
+		}
+
+		bypass = {
+			has_war_with = IRQ
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+   	        add_ideas = militarism_focus
+   	        IRQ = {
+                ROOT = {
+                    create_wargoal = {
+                        type = annex_everything
+                        target = PREV
+                    }
+                }
+
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = ROOT
+                }
+            }
+		}
+	}
+
+
+
+
+
+
+
+
+
+	# ==================================================================================
+	#  PERSIA FOCUS - Production and Development with Soviet
+	# ==================================================================================
+
+
+	focus = {
+		id = PER_soviet_research_company
+		icon = GFX_focus_generic_socialist_science
+		x = 10
+		y = 0
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = PER_soviet_money_development
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = PER_soviet_research_company }
+		relative_position_id = PER_soviet_research_company
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+            random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PER_soviet_money_development_2
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = PER_soviet_money_development }
+		relative_position_id = PER_soviet_money_development
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+            random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PER_soviet_money_development_3
+		icon = GFX_goal_generic_soviet_construction
+		prerequisite = { focus = PER_soviet_money_development_2 }
+		relative_position_id = PER_soviet_money_development_2
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+            random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = PER_country_academia
+		icon = GFX_focus_research2
+		prerequisite = { focus = PER_soviet_money_development_3 }
+		relative_position_id = PER_soviet_money_development_3
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+	focus = {
+		id = PER_advanced_country_academia
+		icon = GFX_focus_research
+		prerequisite = { focus = PER_country_academia }
+		relative_position_id = PER_country_academia
+		x = 0
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+
+	shared_focus = MY_god_message
+	shared_focus = MCAS_greater_country
+}

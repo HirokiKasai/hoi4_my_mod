@@ -4,24 +4,21 @@
 	division_names_group = PER_GAR_01
 
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-		infantry = { x = 3 y = 0 }
-		infantry = { x = 3 y = 1 }
-		infantry = { x = 3 y = 2 }
-	}
-
-	support = {
-        engineer = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+		mountaineers = { x = 3 y = 0 }
+		mountaineers = { x = 3 y = 1 }
+		mountaineers = { x = 3 y = 2 }
 	}
 }
+
 division_template = {
 	name = "Cavalry Brigade"			# Cavalry Brigade
 
@@ -36,7 +33,6 @@ division_template = {
 		cavalry = { x = 1 y = 2 }
 	}
 }
-
 
 units = {
 	######## LAND OOB ########
@@ -161,6 +157,48 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = {
+		name = "Imperial Gendarmerie"
+		location = 10837
+		division_template = "Infantry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
 
 	######## No Naval OOB ########
 }
@@ -175,7 +213,7 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "PER"
 		}
-		requested_factories = 1
+		requested_factories = 3
 		progress = 0.31
 		efficiency = 100
 	}
