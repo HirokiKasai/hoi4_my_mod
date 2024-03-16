@@ -25,7 +25,7 @@ focus_tree = {
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 40
+			factor = 99
 		}
 		
 		available_if_capitulated = yes
@@ -52,66 +52,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_battle_of_persia
-		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = IRQ_battle_of_sau }
-		relative_position_id = IRQ_battle_of_sau
-		x = 0
-		y = 1
-		cost = 5
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			factor = 40
-
-			modifier = {
-				factor = 0
-				OR = {
-					has_war = yes
-					date < 1938.1.1
-				}
-			}
-		}
-		
-		available_if_capitulated = yes
-		will_lead_to_war_with = PER
-
-		completion_reward = {
-			add_war_support = 0.25
-		    PER = {
-		        create_wargoal = {
-            	    type = annex_everything
-       				target = IRQ
-            	}
-
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
-				}
-
-				every_state = {
-					limit = {
-						is_owned_by = PREV
-					}
-					add_core_of = ROOT
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = IRQ_research_and_war
 		icon = GFX_focus_research
-		prerequisite = { focus = IRQ_battle_of_persia }
+		prerequisite = { focus = IRQ_battle_of_sau }
 		x = 0
 		y = 1
-		relative_position_id = IRQ_battle_of_persia
+		relative_position_id = IRQ_battle_of_sau
 		cost = 5
 
 		ai_will_do = {
-			factor = 40
+			factor = 99
 		}
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
@@ -221,7 +171,7 @@ focus_tree = {
 
 	focus = {
 		id = IRQ_iraq_expanded
-		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		icon = GFX_focus_generic_provoke_border_clashes
 		prerequisite = { focus = IRQ_tot_economic_mobilisation }
 		prerequisite = { focus = IRQ_industrial_complex }
 		x = 1
@@ -287,12 +237,62 @@ focus_tree = {
 	}
 
 	focus = {
-		id = IRQ_return_to_persia
+		id = IRQ_battle_of_persia
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = IRQ_iraq_expanded }
+		relative_position_id = IRQ_iraq_expanded
 		x = 0
 		y = 1
-		relative_position_id = IRQ_iraq_expanded
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 40
+
+			modifier = {
+				factor = 0
+				OR = {
+					has_war = yes
+					date < 1938.1.1
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+		will_lead_to_war_with = PER
+
+		completion_reward = {
+			add_war_support = 0.25
+		    PER = {
+		        create_wargoal = {
+            	    type = annex_everything
+       				target = IRQ
+            	}
+
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_owned_by = PREV
+					}
+					add_core_of = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRQ_return_to_persia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = IRQ_battle_of_persia }
+		relative_position_id = IRQ_battle_of_persia
+		x = 0
+		y = 1
 		cost = 5
 		search_filters = {  FOCUS_FILTER_WAR_SUPPORT }
 

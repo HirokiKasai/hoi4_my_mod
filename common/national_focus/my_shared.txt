@@ -152,7 +152,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 50
 		}
 
 		available_if_capitulated = yes
@@ -189,7 +189,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 		}
 
 		available_if_capitulated = yes
@@ -240,7 +240,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 		}
 
 		available_if_capitulated = yes
@@ -297,7 +297,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 		}
 
 		available_if_capitulated = yes
@@ -353,7 +353,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 80
 		}
 
 		available_if_capitulated = yes
@@ -409,7 +409,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 80
 		}
 
 		available_if_capitulated = yes
@@ -465,7 +465,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 80
 		}
 
 		available_if_capitulated = yes
@@ -977,7 +977,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 			modifier = {
 				factor = 0
 				date < 1936.7.1
@@ -1025,7 +1025,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 
 			modifier = {
 				factor = 0
@@ -1110,7 +1110,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 
 			modifier = {
 				factor = 0
@@ -1195,7 +1195,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 
 			modifier = {
 				factor = 0
@@ -1280,7 +1280,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 
 			modifier = {
 				factor = 0
@@ -1370,7 +1370,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 
 		available_if_capitulated = yes
@@ -1402,7 +1402,7 @@
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 
 			modifier = {
 				factor = 0
