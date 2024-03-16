@@ -33,7 +33,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		cost = 5
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 40
@@ -54,7 +54,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
 			factor = 40
@@ -81,7 +81,7 @@ focus_tree = {
 			factor = 40
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
@@ -103,7 +103,7 @@ focus_tree = {
 			factor = 40
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
@@ -127,19 +127,12 @@ focus_tree = {
 			factor = 40
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			every_owned_state = {
-				limit = {
-					is_controlled_by = ROOT
-				}
-                add_resource = {
-                    type = steel
-                    amount = 38
-                }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
@@ -150,14 +143,6 @@ focus_tree = {
 
 			AFG = {
                 every_owned_state = {
-                    limit = {
-                        AFG = { has_full_control_of_state = AFG }
-                        is_core_of = AFG
-                    }
-                    add_resource = {
-                        type = steel
-                        amount = 23
-                    }
                     add_extra_state_shared_building_slots = 2
                     add_building_construction = {
                         type = infrastructure
@@ -182,19 +167,15 @@ focus_tree = {
 			factor = 40
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-		    random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-				}
+		    266 = {
                 add_resource = {
                     type = steel
-                    amount = 16
+                    amount = 24
                 }
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -204,18 +185,16 @@ focus_tree = {
 				}
 			}
 
-			AFG = {
-                random_owned_controlled_state = {
-                    limit = {
-                        AFG = { has_full_control_of_state = AFG }
-                        is_core_of = AFG
-                    }
-                    add_extra_state_shared_building_slots = 4
-                    add_building_construction = {
-                        type = arms_factory
-                        level = 2
-                        instant_build = yes
-                    }
+			267 = {
+                add_resource = {
+                    type = steel
+                    amount = 18
+                }
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
                 }
 			}
 		}
@@ -234,7 +213,7 @@ focus_tree = {
 			factor = 40
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
@@ -278,7 +257,7 @@ focus_tree = {
 			factor = 40
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
@@ -331,7 +310,7 @@ focus_tree = {
 			}
 		}
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 		will_lead_to_war_with = IRQ
 
 
