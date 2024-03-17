@@ -1,4 +1,4 @@
-﻿
+
 focus_tree = {
 	id = iraq_focus
 	
@@ -189,6 +189,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
+			hidden_effect = { news_event = { id = my_news.1 hours = 12 } }
+
 			transfer_state = 765
 			transfer_state = 658
 			transfer_state = 659

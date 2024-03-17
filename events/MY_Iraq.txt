@@ -1,0 +1,131 @@
+
+
+# 自作MODニュース用 ID定義
+add_namespace = my_news
+
+
+# イラク、周辺地域を併合
+news_event = {
+	id = my_news.1
+	title = my_news.1.t
+	desc = my_news.1.desc
+	picture = GFX_news_event_soldiers_marching
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = my_news.1.a
+		trigger = {
+			NOT = {
+				TAG = AFG
+				TAG = IRQ
+				TAG = PER
+				TAG = TUR
+			}
+		}
+	}
+	option = {
+		name = my_news.1.b
+		trigger = { TAG = IRQ }
+	}
+	option = {
+		name = my_news.1.c
+		trigger = {
+			OR = {
+				TAG = AFG
+				TAG = PER
+				TAG = TUR
+			}
+		}
+	}
+}
+
+# イラク、サウジアラビア侵攻
+news_event = {
+	id = my_news.2
+	title = my_news.2.t
+	desc = my_news.2.desc
+	picture = GFX_news_event_003
+
+	major = yes
+    fire_only_once = yes
+
+	trigger = {
+    	IRQ = { has_offensive_war_with = SAU }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = my_news.2.a
+		trigger = {
+			NOT = {
+				TAG = AFG
+				TAG = IRQ
+				TAG = PER
+				TAG = TUR
+			}
+		}
+	}
+
+	option = {
+		name = my_news.2.b
+		trigger = { TAG = IRQ }
+	}
+
+	option = {
+		name = my_news.2.c
+		trigger = {
+			OR = {
+				TAG = AFG
+				TAG = PER
+				TAG = TUR
+			}
+		}
+	}
+}
+
+# OPEC結成
+news_event = {
+	id = my_news.3
+	title = my_news.3.t
+	desc = my_news.3.desc
+	picture = GFX_news_event_003
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = my_news.3.a
+		trigger = {
+			NOT = {
+				TAG = AFG
+				TAG = IRQ
+				TAG = PER
+				TAG = TUR
+			}
+		}
+	}
+
+	option = {
+		name = my_news.3.b
+		trigger = { TAG = IRQ }
+	}
+
+	option = {
+		name = my_news.3.c
+		trigger = {
+			OR = {
+				TAG = AFG
+				TAG = PER
+				TAG = TUR
+			}
+		}
+	}
+}
+
