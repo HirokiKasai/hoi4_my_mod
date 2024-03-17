@@ -622,8 +622,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				ai_focus_aggressive_factor = 0.5
-				weekly_manpower = 1000
+				weekly_manpower = 500
+				training_time_factor = -0.2
 			}
 		}
 
@@ -642,10 +642,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				ai_focus_aggressive_factor = 0.5
-				weekly_manpower = 1500
-				war_support_weekly = 0.01
-				military_leader_cost_factor = -0.5
+				weekly_manpower = 750
+				training_time_factor = -0.3
 			}
 		}
 
@@ -664,11 +662,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				ai_focus_defense_factor = 0.5
-				industrial_capacity_factory = 0.2
-				weekly_manpower = 2500
-				war_support_weekly = 0.01
-				military_leader_cost_factor = -0.5
+				weekly_manpower = 1000
+				training_time_factor = -0.5
+				army_morale_factor = 0.25
 			}
 		}
 

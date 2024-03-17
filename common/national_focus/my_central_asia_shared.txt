@@ -49,8 +49,18 @@
 		mutually_exclusive = {
 			focus = MCAS_development_country
 		}
+
 		x = 18
 		y = 0
+
+        offset = {
+            x = 8
+            y = 0
+            trigger = {
+                tag = AFG
+            }
+        }
+
 		cost = 5
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
