@@ -57,7 +57,11 @@
             x = 8
             y = 0
             trigger = {
-                tag = AFG
+				NOT = {
+					OR = {
+						tag = PER
+					}
+				}
             }
         }
 
@@ -66,6 +70,17 @@
 
 		ai_will_do = {
 			factor = 10
+
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						tag = AFG
+						tag = PER
+						tag = TUR
+					}
+				}
+			}
 		}
 
 		available_if_capitulated = yes
@@ -410,7 +425,58 @@
 
 
 	# ==================================================================================
-	#  PRODUCTION_DOCTRINE
+	#  ARMY_DOCTRINE
 	# ==================================================================================
 
 
+
+	shared_focus = {
+		id = MCAS_
+		icon = GFX_goal_generic_defence
+		x = 24
+		y = 0
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+                set_technology = { basic_heavy_tank_chassis = 1 }
+				set_technology = { advanced_heavy_tank_chassis = 1 }
+				create_equipment_variant = {
+                    name = "Tiger X"
+                    type = heavy_tank_chassis_2
+                    parent_version = 1
+                    modules = {
+                        main_armament_slot=tank_heavy_cannon_2
+                        engine_type_slot=tank_diesel_engine
+                        special_type_slot_1=tank_radio_3
+                        special_type_slot_2=armor_skirts
+                        special_type_slot_3=easy_maintenance
+                        special_type_slot_4=extra_ammo_storage
+                        turret_type_slot=tank_heavy_three_man_tank_turret
+                        suspension_type_slot=tank_christie_suspension
+                        armor_type_slot=tank_welded_armor
+                    }
+                    upgrades = {
+                        tank_nsb_engine_upgrade = 9
+                        tank_nsb_armor_upgrade = 12
+                    }
+                }
+				add_equipment_to_stockpile = {
+					type = heavy_tank_chassis_2
+					variant_name = "Tiger X"
+					amount = 200
+					producer = ROOT
+				}
+			}
+		}
+	}

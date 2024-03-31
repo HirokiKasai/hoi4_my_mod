@@ -72,6 +72,19 @@
 
 		completion_reward = {
 			add_political_power = 250
+			if = {
+			    limit = {
+			        is_puppet = yes
+			    }
+			    add_stability = 0.25
+			    add_war_support = 0.25
+			    add_autonomy_score = {
+			        value = 2000
+			    }
+                add_offsite_building = { type = industrial_complex level = 6 }
+                add_offsite_building = { type = arms_factory level = 4 }
+                add_offsite_building = { type = dockyard level = 4 }
+			}
 		}
 	}
 
