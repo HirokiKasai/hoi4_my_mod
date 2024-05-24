@@ -52,7 +52,7 @@
 		icon = GFX_goal_generic_propaganda
 		x = 14
 		y = 15
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -101,7 +101,7 @@
 		x = -11
 		y = 1
 		relative_position_id = MY_god_message
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -122,7 +122,7 @@
 		x = 0
 		y = 2
 		relative_position_id = MY_prophecy
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -161,7 +161,7 @@
 		x = -6
 		y = 1
 		relative_position_id = MY_god_message
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -198,7 +198,7 @@
 		x = -2
 		y = 1
 		relative_position_id = MY_priority_to_the_factory
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -249,7 +249,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_investment
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -306,7 +306,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_investment_2
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -362,7 +362,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_priority_to_the_factory
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -418,7 +418,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_local_development
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -474,7 +474,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_local_development_2
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -531,7 +531,7 @@
 		x = 2
 		y = 1
 		relative_position_id = MY_priority_to_the_factory
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -593,7 +593,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_dockyard
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -655,7 +655,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_dockyard_2
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -817,7 +817,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_miracle_development
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -855,7 +855,7 @@
 		x = -2
 		y = 1
 		relative_position_id = MY_search_resource_steel
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -894,7 +894,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_search_resource_steel
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -924,7 +924,7 @@
 		x = 2
 		y = 1
 		relative_position_id = MY_search_resource_steel
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -956,7 +956,7 @@
 		x = 0
 		y = 2
 		relative_position_id = MY_search_resource_steel
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -986,7 +986,7 @@
 		x = 2
 		y = 1
 		relative_position_id = MY_god_message
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1034,7 +1034,7 @@
 		x = -3
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1119,7 +1119,7 @@
 		x = -1
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1204,7 +1204,7 @@
 		x = 1
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1289,7 +1289,7 @@
 		x = 3
 		y = 1
 		relative_position_id = MY_the_volunteer
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1379,7 +1379,7 @@
 		x = 0
 		y = 2
 		relative_position_id = MY_the_volunteer
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1411,7 +1411,7 @@
 		x = 11
 		y = 1
 		relative_position_id = MY_god_message
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1448,7 +1448,7 @@
 			focus = MY_populism
 			focus = MY_absolutism
 		}
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1480,7 +1480,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_communism
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1529,7 +1529,7 @@
 			focus = MY_populism
 			focus = MY_absolutism
 		}
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1539,6 +1539,7 @@
 				factor = 0
 				OR = {
 					has_war = yes
+					tag = IRQ
 				}
 			}
 		}
@@ -1561,7 +1562,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_fascism
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1571,6 +1572,7 @@
 				factor = 0
 				OR = {
 					has_war = yes
+					tag = IRQ
 				}
 			}
 		}
@@ -1610,7 +1612,7 @@
 			focus = MY_communism
 			focus = MY_absolutism
 		}
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1620,6 +1622,7 @@
 				factor = 0
 				OR = {
 					has_war = yes
+					tag = IRQ
 				}
 			}
 		}
@@ -1642,7 +1645,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_populism
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1652,6 +1655,7 @@
 				factor = 0
 				OR = {
 					has_war = yes
+					tag = IRQ
 				}
 			}
 		}
@@ -1691,7 +1695,7 @@
 			focus = MY_communism
 			focus = MY_populism
 		}
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1701,6 +1705,7 @@
 				factor = 0
 				OR = {
 					has_war = yes
+					tag = IRQ
 				}
 			}
 		}
@@ -1723,7 +1728,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_absolutism
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1733,6 +1738,7 @@
 				factor = 0
 				OR = {
 					has_war = yes
+					tag = IRQ
 				}
 			}
 		}
@@ -1772,7 +1778,7 @@
 		x = 1
 		y = 1
 		relative_position_id = MY_fascism_2
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1802,7 +1808,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_war_plan
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1842,7 +1848,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_future_army_design
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -1877,7 +1883,7 @@
 		x = 0
 		y = 1
 		relative_position_id = MY_future_air_design
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {

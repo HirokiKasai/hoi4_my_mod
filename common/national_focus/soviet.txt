@@ -5952,7 +5952,7 @@ focus_tree = {
 					}
 					support = {
 						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
+						artillery_brigade = { x = 0 y = 1 }
 						recon = { x = 0 y = 2 }
 					}
 				}
@@ -6203,7 +6203,7 @@ focus_tree = {
 						penal_battalion = { x = 2 y = 2 }
 					}
 					support = {
-						artillery = { x = 0 y = 0 }
+						artillery_brigade = { x = 0 y = 0 }
 					}
 				}
 
@@ -6737,8 +6737,11 @@ focus_tree = {
 			}
 			custom_effect_tooltip = SOV_the_centre_ns_tt
 
-			add_political_power = 25
-			add_stability = 0.05
+			add_political_power = 2000
+			add_stability = 0.25
+			add_war_support = 0.5
+			add_ideas = tot_economic_mobilisation
+			add_ideas = militarism_focus
 			set_division_template_lock = {
 				division_template = "NKVD Pogranichnaya Diviziya"
 				is_locked = no
@@ -7434,6 +7437,8 @@ focus_tree = {
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 10
 
+		will_lead_to_war_with = JAP
+
 		available = {
 			has_country_flag = {
 				flag = SOV_trial_of_the_generals_flag
@@ -7520,6 +7525,19 @@ focus_tree = {
 			custom_effect_tooltip = SOV_trigger_third_moscow_trial_tt
 
 			SOV_remove_paranoia_effect = yes #REMOVE PARANOIA SYSTEM
+
+			# ADDED CHI & WAR OF JAP
+            add_to_faction = CHI
+            create_wargoal = {
+                type = annex_everything
+                target = MAN
+                expire = 0
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = JAP
+                expire = 0
+            }
 		}
 	}
 

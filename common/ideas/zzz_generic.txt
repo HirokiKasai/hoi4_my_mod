@@ -401,7 +401,10 @@ ideas = {
 			}
 
 			modifier = {
-				weekly_manpower = 10000
+				weekly_manpower = 1000
+				min_export = -0.3
+				no_supply_grace = 120
+				supply_consumption_factor = -0.5
 				army_infantry_defence_factor = 0.25
 			}
 		}
@@ -474,6 +477,8 @@ ideas = {
 				industry_free_repair_factor = 1
 				production_speed_rail_way_factor = 2
 				production_speed_supply_node_factor = 10
+				production_speed_naval_base_factor = 5
+				production_speed_air_base_factor = 5
 			}
 		}
 
@@ -592,6 +597,52 @@ ideas = {
 				air_ace_generation_chance_factor = 0.1
 				experience_gain_navy_factor = 0.5
 				naval_speed_factor = 0.35
+			}
+		}
+
+
+        # Soviet Cheat IDEA
+		MY_soviet_justice_force = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = jap_the_unthinkable_option
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.25
+				supply_consumption_factor = -0.25
+ 				experience_loss_factor = -0.25
+				attrition = -0.5
+ 				army_speed_factor = 0.25
+ 				army_morale_factor = 0.5
+ 				stability_weekly_factor = 0.01
+ 				war_support_factor = 0.01
+ 				winter_attrition_factor = -0.5
+				air_accidents_factor = -0.5
+				air_night_penalty = -0.5
+				air_weather_penalty = -0.5
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.5
+			}
+
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.5 instant = yes
+				}
+				anti_air = {
+					build_cost_ic = -0.5 instant = yes
+				}
+				anti_tank = {
+					build_cost_ic = -0.5 instant = yes
+				}
 			}
 		}
 
@@ -2385,7 +2436,7 @@ ideas = {
 			}
 			
 			traits = { my_bomber_aircraft_manufacturer }
-		}	
+		}
 	}
 
 	industrial_concern = {
