@@ -72,6 +72,9 @@
 
 		completion_reward = {
 			add_political_power = 250
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
 			if = {
 			    limit = {
 			        is_puppet = yes
@@ -357,7 +360,7 @@
 
 	shared_focus = {
 		id = MY_local_development
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = MY_priority_to_the_factory }
 		x = 0
 		y = 1
@@ -379,7 +382,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -391,7 +394,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -403,7 +406,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -413,7 +416,7 @@
 
 	shared_focus = {
 		id = MY_local_development_2
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = MY_local_development }
 		x = 0
 		y = 1
@@ -435,7 +438,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -447,7 +450,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -459,7 +462,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = arms_factory
+					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
@@ -469,7 +472,7 @@
 
 	shared_focus = {
 		id = MY_local_development_3
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = MY_local_development_2 }
 		x = 0
 		y = 1
@@ -491,7 +494,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -503,7 +506,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -515,7 +518,7 @@
 				}
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -813,10 +816,10 @@
 	shared_focus = {
 		id = MY_search_resource_steel
 		icon = GFX_focus_generic_steel
-		prerequisite = { focus = MY_miracle_development }
-		x = 0
+		prerequisite = { focus = MY_god_message }
+		x = 19
 		y = 1
-		relative_position_id = MY_miracle_development
+		relative_position_id = MY_god_message
 		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
