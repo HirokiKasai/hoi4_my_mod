@@ -33,9 +33,11 @@
  MY_absolutism:0 "君主主義に傾倒"
  MY_absolutism_2:0 "国王を支えよ！"
  MY_war_plan:0 "作戦計画局"
+ MY_war_plan_manpowerd:0 "作戦計画局"
  MY_future_army_design:0 "陸軍の未来設計"
  MY_future_air_design:0 "空軍の未来設計"
  MY_future_navy_design:0 "海軍の未来設計"
+ MY_manpower_doctrine:0 "人は城、人は石垣、人は掘"
  MY_future_design_1:0 "未来設計"
  MY_future_design_2:0 "未来設計"
  MY_future_design_3:0 "未来設計"
@@ -47,6 +49,9 @@
  MY_protect_own_country_2:0 "郷土防衛"
  MY_artillery_cost_down:0 "大砲量産主義"
  MY_rail_way_country:0 "線路は続くよどこまでも"
+ MY_sov_russian_soul:0 "先制蜂起"
+ MY_ger_blitzkrieg_1:0 "ポーランド電撃侵攻"
+ MY_ger_blitzkrieg_2:0 "バルバロッサ作戦"
 
 
  MCAS_greater_country:0 "偉大な国家への一歩"

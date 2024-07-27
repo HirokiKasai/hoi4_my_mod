@@ -1063,7 +1063,6 @@
 			transfer_state = 422
 			transfer_state = 733
 			JAP = {
-                puppet = INS
                 puppet = AST
                 puppet = NZL
 				annex_country = {
@@ -1076,14 +1075,45 @@
                     }
                     add_core_of = ROOT
                 }
+
+			    SIA = {
+                    annex_country = {
+                        target = INS
+                        transfer_troops = yes
+                    }
+                    every_state = {
+                        limit = {
+                            is_owned_by = SIA
+                        }
+                        add_core_of = SIA
+                    }
+                    random_state = {
+                        limit = {
+                            has_state_flag = JAP_new_naval_estimates_DY1
+                        }
+                        add_building_construction = {
+                            type = dockyard
+                            level = 2
+                            instant_build = yes
+                        }
+                    }
+                    random_state = {
+                        limit = {
+                            has_state_flag = JAP_new_naval_estimates_DY2
+                        }
+                        add_building_construction = {
+                            type = dockyard
+                            level = 2
+                            instant_build = yes
+                        }
+                    }
+                }
 			}
 			USA = {
                 add_ideas = MY_bureau_of_ships_focus
 			}
 			ENG = {
                 add_ideas = MY_bureau_of_ships_focus
-                add_to_faction = USA
-                add_to_faction = FRA
 			}
 
 		}
@@ -4913,6 +4943,8 @@
 				}
 		    }
 			MAN = {
+				add_stability = 0.5
+				add_war_support = 0.5
 				annex_country = {
                     target = MEN
                     transfer_troops = yes
@@ -4920,7 +4952,7 @@
                 add_ideas = MY_all_in
                 add_ideas = MY_fascism
                 add_timed_idea = {
-                    idea = MY_absolutism_early_production
+                    idea = MY_three_year_development
                     days = 365
                 }
                 add_research_slot = 2
@@ -4948,6 +4980,21 @@
                     }
                     add_core_of = MAN
                 }
+                if = {
+                    limit = {
+                        has_war_support < 0.5
+                    }
+                    add_war_support = 0.25
+                }
+                else_if = {
+                    limit = {
+                        has_idea = war_economy
+                    }
+                    add_political_power = 150
+                }
+                else = {
+                    add_ideas = war_economy
+                }
 			}
 			SIA = {
 				add_stability = 0.25
@@ -4968,7 +5015,7 @@
                 }
                 add_equipment_to_stockpile = {
                     type = infantry_equipment
-                    amount = 10000
+                    amount = 30000
                     producer = JAP
                 }
                 every_owned_state = {
@@ -4981,6 +5028,26 @@
                         level = 2
                         instant_build = yes
                     }
+                }
+                add_offsite_building = { type = industrial_complex level = 8 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 365
+                }
+                if = {
+                    limit = {
+                        has_war_support < 0.5
+                    }
+                    add_war_support = 0.25
+                }
+                else_if = {
+                    limit = {
+                        has_idea = war_economy
+                    }
+                    add_political_power = 150
+                }
+                else = {
+                    add_ideas = war_economy
                 }
 			}
 

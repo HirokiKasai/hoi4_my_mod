@@ -327,11 +327,38 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				training_time_factor = -0.5
 				send_volunteers_tension = -1
 				justify_war_goal_time = -0.50
 				generate_wargoal_tension = -0.5
 				military_leader_cost_factor = -0.90
+			}
+		}
+
+		MY_war_plan_manpowerd = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_wargaming_division
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteers_tension = -1
+				justify_war_goal_time = -0.50
+				generate_wargoal_tension = -0.5
+				military_leader_cost_factor = -0.90
+				industrial_capacity_factory = 0.1
+				weekly_manpower = 5000
+				war_support_weekly = 0.01
+				experience_loss_factor = -0.33
+				army_morale_factor = 0.25
+				army_org_Factor = 0.25
 			}
 		}
 
@@ -468,7 +495,7 @@ ideas = {
 				always = yes
 			}
 
-			picture = generic_build_infrastructure
+			picture = generic_railroads
 
 			removal_cost = -1
 			
@@ -600,6 +627,91 @@ ideas = {
 			}
 		}
 
+		MY_sov_russian_soul = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+				has_government = neutrality
+			}
+
+			picture = generic_communism_banned
+
+			removal_cost = -1
+
+			modifier = {
+			    stability_weekly = 0.01
+			    war_support_weekly = 0.01
+			    weekly_manpower = 5000
+			    production_factory_start_efficiency_factor = 0.2
+			    industry_free_repair_factor = 1
+			    industrial_capacity_factory = 3
+			    army_core_attack_factor = 0.25
+			    army_core_defence_factor = 1
+			    army_speed_factor = 0.25
+				winter_attrition_factor = -0.5
+				out_of_supply_factor = -0.75
+				supply_consumption_factor = -0.75
+				no_supply_grace = 240
+			}
+		}
+
+		MY_ger_blitzkrieg_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+			    army_speed_factor = 0.25
+			    air_cas_present_factor = 1
+			}
+
+            targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+
+		MY_ger_blitzkrieg_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_acquire_tanks
+
+			removal_cost = -1
+
+			modifier = {
+			    army_morale_factor = 0.25
+			    air_cas_present_factor = 1
+			    enemy_army_bonus_air_superiority_factor = -0.5
+			}
+
+            targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.5
+				defense_bonus_against = 1
+			}
+		}
+
 
         # Soviet Cheat IDEA
 		MY_soviet_justice_force = {
@@ -674,7 +786,7 @@ ideas = {
 
 			modifier = {
 				weekly_manpower = 500
-				training_time_factor = -0.2
+				training_time_factor = -0.05
 			}
 		}
 
@@ -694,7 +806,7 @@ ideas = {
 
 			modifier = {
 				weekly_manpower = 750
-				training_time_factor = -0.3
+				training_time_factor = -0.1
 			}
 		}
 
@@ -714,7 +826,7 @@ ideas = {
 
 			modifier = {
 				weekly_manpower = 1000
-				training_time_factor = -0.5
+				training_time_factor = -0.1
 				army_morale_factor = 0.25
 			}
 		}
@@ -1948,7 +2060,10 @@ ideas = {
 			picture = generic_armor
 
 			available = {
-				has_completed_focus = MY_future_army_design
+                OR = {
+				    has_completed_focus = MY_future_army_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50
@@ -2049,7 +2164,10 @@ ideas = {
 		my_kure_naval_arsenal = {
 			picture = kure_naval_arsenal
 			available = {
-				has_completed_focus = MY_future_navy_design
+                OR = {
+				    has_completed_focus = MY_future_navy_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50
@@ -2091,7 +2209,10 @@ ideas = {
 		my_yokosuka_naval_arsenal = {
 			picture = yokosuka_naval_arsenal
 			available = {
-				has_completed_focus = MY_future_navy_design
+                OR = {
+				    has_completed_focus = MY_future_navy_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50
@@ -2133,7 +2254,10 @@ ideas = {
 		my_maizuru_naval_arsenal = {
 			picture = maizuru_naval_arsenal
 			available = {
-				has_completed_focus = MY_future_navy_design
+                OR = {
+				    has_completed_focus = MY_future_navy_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50
@@ -2185,7 +2309,10 @@ ideas = {
 		my_sasebo_naval_arsenal = {
 			picture = sasebo_naval_arsenal
 			available = {
-				has_completed_focus = MY_future_navy_design
+                OR = {
+				    has_completed_focus = MY_future_navy_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50
@@ -2410,7 +2537,10 @@ ideas = {
 		my_light_aircraft = {
 			picture = generic_air_payment
 			available = {
-				has_completed_focus = MY_future_air_design
+                OR = {
+                	has_completed_focus = MY_future_air_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50
@@ -2426,7 +2556,10 @@ ideas = {
 		my_bomber_aircraft = {
 			picture = generic_air_bonus
 			available = {
-				has_completed_focus = MY_future_air_design
+                OR = {
+				    has_completed_focus = MY_future_air_design
+                	has_completed_focus = MY_manpower_doctrine
+                }
 			}
 
 			cost = 50

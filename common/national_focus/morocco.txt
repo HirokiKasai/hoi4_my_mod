@@ -962,8 +962,8 @@ focus_tree = {
 				category = industry
 			}
 
-            add_offsite_building = { type = industrial_complex level = 10 }
-            add_offsite_building = { type = arms_factory level = 10 }
+            add_offsite_building = { type = industrial_complex level = 5 }
+            add_offsite_building = { type = arms_factory level = 5 }
             add_offsite_building = { type = dockyard level = 15 }
 
             every_owned_state = {
@@ -2347,6 +2347,4 @@ focus_tree = {
 	}
 
     shared_focus = MCAS_greater_country
-
-	shared_focus = MY_god_message
 }

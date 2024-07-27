@@ -1059,8 +1059,6 @@
 				AND = {
 					NOT = {
 			            is_guaranteed_by = ROOT
-			            is_in_faction = YES
-			            is_puppet = yes
 			            has_non_aggression_pact_with = ROOT
 			            is_subject_of = ROOT
 			            has_war_with = ROOT
@@ -1082,8 +1080,6 @@
 					AND = {
 						NOT = {
 				            is_guaranteed_by = ROOT
-				            is_in_faction = YES
-				            is_puppet = yes
 				            has_non_aggression_pact_with = ROOT
 				            is_subject_of = ROOT
 				            has_war_with = ROOT
@@ -1144,8 +1140,6 @@
 				AND = {
 					NOT = {
 			            is_guaranteed_by = ROOT
-			            is_in_faction = YES
-			            is_puppet = yes
 			            has_non_aggression_pact_with = ROOT
 			            is_subject_of = ROOT
 			            has_war_with = ROOT
@@ -1167,8 +1161,6 @@
 					AND = {
 						NOT = {
 				            is_guaranteed_by = ROOT
-				            is_in_faction = YES
-				            is_puppet = yes
 				            has_non_aggression_pact_with = ROOT
 				            is_subject_of = ROOT
 				            has_war_with = ROOT
@@ -1229,8 +1221,6 @@
 				AND = {
 					NOT = {
 			            is_guaranteed_by = ROOT
-			            is_in_faction = YES
-			            is_puppet = yes
 			            has_non_aggression_pact_with = ROOT
 			            is_subject_of = ROOT
 			            has_war_with = ROOT
@@ -1252,8 +1242,6 @@
 					AND = {
 						NOT = {
 				            is_guaranteed_by = ROOT
-				            is_in_faction = YES
-				            is_puppet = yes
 				            has_non_aggression_pact_with = ROOT
 				            is_subject_of = ROOT
 				            has_war_with = ROOT
@@ -1314,8 +1302,6 @@
 				AND = {
 					NOT = {
 			            is_guaranteed_by = ROOT
-			            is_in_faction = YES
-			            is_puppet = yes
 			            has_non_aggression_pact_with = ROOT
 			            is_subject_of = ROOT
 			            has_war_with = ROOT
@@ -1337,8 +1323,6 @@
 					AND = {
 						NOT = {
 			                is_guaranteed_by = ROOT
-			                is_in_faction = YES
-			                is_puppet = yes
 			                has_non_aggression_pact_with = ROOT
 			                is_subject_of = ROOT
 			                has_war_with = ROOT
@@ -1808,9 +1792,12 @@
 		id = MY_future_army_design
 		icon = GFX_goal_continuous_armor_production
 		prerequisite = { focus = MY_war_plan }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = MY_war_plan
+		mutually_exclusive = {
+			focus = MY_manpower_doctrine
+		}
 		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
@@ -1916,6 +1903,42 @@
 			}
 
 			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = my_kure_naval_arsenal
+			show_ideas_tooltip = my_yokosuka_naval_arsenal
+			show_ideas_tooltip = my_maizuru_naval_arsenal
+			show_ideas_tooltip = my_sasebo_naval_arsenal
+		}
+	}
+
+	shared_focus = {
+		id = MY_manpower_doctrine
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = MY_war_plan }
+		x = -1
+		y = 1
+		relative_position_id = MY_war_plan
+		mutually_exclusive = {
+			focus = MY_future_army_design
+		}
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MY_war_plan
+				add_idea = MY_war_plan_manpowerd
+			}
+
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = my_tank_board
+			show_ideas_tooltip = my_light_aircraft
+			show_ideas_tooltip = my_bomber_aircraft
 			show_ideas_tooltip = my_kure_naval_arsenal
 			show_ideas_tooltip = my_yokosuka_naval_arsenal
 			show_ideas_tooltip = my_maizuru_naval_arsenal

@@ -3213,6 +3213,10 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
+            add_timed_idea = {
+                idea = MY_ger_blitzkrieg_2
+                days = 365
+            }
 			IF = {
 				limit = { SOV = { has_civil_war = no } }
 				create_wargoal = {
@@ -3685,6 +3689,11 @@ focus_tree = {
 			}
 		}	
 		completion_reward = {
+            add_timed_idea = {
+                idea = MY_ger_blitzkrieg_1
+                days = 180
+            }
+
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {

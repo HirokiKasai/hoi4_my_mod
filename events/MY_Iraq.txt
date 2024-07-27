@@ -11,8 +11,10 @@ news_event = {
 	desc = my_news.1.desc
 	picture = GFX_news_event_soldiers_marching
 
+    # ニュースイベントかどうか
 	major = yes
 
+    # トリガーをひかれる時のみ実行されるか
 	is_triggered_only = yes
 
 	option = {
@@ -125,6 +127,116 @@ news_event = {
 				TAG = PER
 				TAG = TUR
 			}
+		}
+	}
+}
+
+
+
+# 中国がイギリス・フランス・アメリカ等と戦争したら、九カ国条約を削除
+country_event = {
+	id = my_news.10
+	title = my_news.10.t
+	desc = my_news.10.desc
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+	    # 対象国の指定
+		original_tag = CHI
+
+		# 九ヶ国条約を保持
+		has_idea = CHI_nine_power_treaty
+
+		# フラグを持っているか
+		NOT = { has_country_flag = CHI_war_for_allies }
+
+		OR = {
+		    has_war_with = ENG
+		    has_war_with = USA
+		    has_war_with = FRA
+		}
+	}
+
+    # 発生日時の乱数
+	mean_time_to_happen = {
+		days = 7
+	}
+
+    # 破棄
+	option = {
+		name = my_news.10.a
+
+		# AIが選択する確率（別の選択肢との数値の差で確率が決まる）
+		ai_chance = {
+        	factor = 10
+        }
+
+		# 九カ国条約の破棄
+		remove_ideas = CHI_nine_power_treaty
+
+		# 香港、マカオの占拠
+		transfer_state = 326
+		transfer_state = 729
+		transfer_state = 728
+
+		# 破棄フラグON
+		set_country_flag = CHI_war_for_allies
+
+        # 破棄ニュース
+		hidden_effect = { news_event = { id = my_news.11 hours = 24 } }
+
+		# 各国との関係性マイナス （modifier の値は定数）
+		ENG  = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } }
+		USA  = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } }
+		FRA  = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } }
+		POR  = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } }
+
+
+	}
+
+	# 破棄しない
+	option = {
+		name = my_news.10.b
+		ai_chance = {
+        	factor = 0
+        }
+	}
+}
+
+# 中国が９カ国条約を廃棄した場合のニュース
+news_event = {
+	id = my_news.11
+	title = my_news.11.t
+	desc = my_news.11.desc
+	picture = GFX_news_event_generic_read_write
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = my_news.11.a
+		trigger = {
+			NOT = {
+			    tag = CHI
+			    has_war_with = CHI
+			}
+		}
+	}
+
+	option = {
+		name = my_news.11.b
+		trigger = {
+			has_war_with = CHI
+			NOT = {
+			    tag = CHI
+			}
+		}
+	}
+
+	option = {
+		name = my_news.11.c
+		trigger = {
+		    tag = CHI
 		}
 	}
 }
