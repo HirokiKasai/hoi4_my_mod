@@ -2613,7 +2613,7 @@ focus_tree = {
 		x = 31
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 7
@@ -2656,7 +2656,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_great_indian_peninsula_railway
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2718,7 +2718,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_industrial_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2760,7 +2760,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_industrial_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -2803,7 +2803,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = RAJ_industrial_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -2836,7 +2836,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = RAJ_industrial_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2876,7 +2876,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = RAJ_industrial_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -2923,7 +2923,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_industrial_expansion
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -3006,7 +3006,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = RAJ_expand_mazagon_dock
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -3090,7 +3090,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_expand_mazagon_dock
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3128,7 +3128,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = RAJ_expand_mazagon_dock
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -3321,7 +3321,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_great_indian_peninsula_railway
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3381,7 +3381,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_east_india_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 25
@@ -3437,7 +3437,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_east_india_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3499,7 +3499,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_integrate_princely_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3537,7 +3537,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_clamp_down_on_corruption
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3569,7 +3569,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_administrative_oversight
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3607,7 +3607,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_administrative_oversight
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3650,7 +3650,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = RAJ_ishapore_arsenal
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3758,7 +3758,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = RAJ_ishapore_arsenal
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -3860,7 +3860,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = RAJ_ishapore_arsenal
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30

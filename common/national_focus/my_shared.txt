@@ -50,7 +50,7 @@
 	shared_focus = {
 		id = MY_god_message
 		icon = GFX_goal_generic_propaganda
-		x = 14
+		x = 13
 		y = 15
 		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -805,8 +805,11 @@
 			}
 
 			if = {
-			    limit = { tag = RAJ }
-			    remove_ideas = RAJ_agrarian_society
+			    limit = {
+			        tag = RAJ
+			        check_variable = { RAJ_agrarian_society_value < 0 }
+			    }
+			    set_variable = { RAJ_agrarian_society_value = -0.25 }
 			}
 		}
 	}

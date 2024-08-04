@@ -15728,6 +15728,11 @@ ai_will_do = {
                 }
             }
 
+
+            GER = {
+                add_to_faction = JAP
+            }
+
             USA = {
                 set_country_flag = SOV_fascism_civil_war_check
             }
