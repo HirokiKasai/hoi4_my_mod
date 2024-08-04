@@ -3953,6 +3953,7 @@ focus_tree = {
 	}
 
 	shared_focus = MY_god_message
+    shared_focus = MCAS_greater_country
 
 
 }		

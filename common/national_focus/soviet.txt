@@ -15729,129 +15729,35 @@ ai_will_do = {
             }
 
             USA = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_political_power = 250
-                add_stability = 0.25
-                add_war_support = 0.25
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
             ENG = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_political_power = 250
-                add_stability = 0.25
-                add_war_support = 0.25
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
             FRA = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_political_power = 250
-                add_stability = 0.25
-                add_war_support = 0.25
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
             PER = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
             AFG = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
             IRQ = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
             RAJ = {
-                limit = {
-                    NOT = { has_government = fascism }
-                }
-                add_popularity = {
-                    ideology = fascism
-                    popularity = 0.5
-                }
-                start_civil_war = {
-                    ruling_party = fascism
-                    ideology = ROOT
-                    size = 0.3
-                }
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
-            GER = {
-                add_to_faction = USA
-                add_to_faction = ENG
-                add_to_faction = JAP
-                add_to_faction = SIA
-                add_to_faction = FRA
-                add_to_faction = IRQ
-                add_to_faction = PER
-                add_to_faction = AFG
-                add_to_faction = RAJ
+            MOR = {
+                set_country_flag = SOV_fascism_civil_war_check
             }
 
 		}
