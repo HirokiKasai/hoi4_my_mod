@@ -53,7 +53,7 @@
 		x = 39
 		y = 15
 
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -92,7 +92,7 @@
 		relative_position_id = MCAS_greater_country
 		x = -2
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -117,7 +117,7 @@
 		relative_position_id = MCAS_get_army_weapons
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -147,7 +147,7 @@
 		relative_position_id = MCAS_get_army_weapons_2
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -178,7 +178,7 @@
 		relative_position_id = MCAS_greater_country
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -200,7 +200,7 @@
 		relative_position_id = MCAS_manpower_doctrine
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -224,7 +224,7 @@
 		relative_position_id = MCAS_manpower_doctrine_2
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -249,7 +249,7 @@
 		relative_position_id = MCAS_greater_country
 		x = 2
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -281,7 +281,7 @@
 		relative_position_id = MCAS_local_development
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -313,7 +313,7 @@
 		relative_position_id = MCAS_local_development_2
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -371,7 +371,7 @@
 		relative_position_id = MCAS_manpower_doctrine_3
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -393,7 +393,7 @@
 		relative_position_id = MCAS_we_are_imperial_army
 		x = 0
 		y = 1
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {
@@ -423,7 +423,7 @@
 		icon = GFX_goal_generic_defence
 		x = 24
 		y = 0
-		cost = 5
+		cost = 3
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
 		ai_will_do = {

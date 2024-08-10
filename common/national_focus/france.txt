@@ -1574,60 +1574,6 @@
 			add_country_leader_trait = gifted_shipping_magnate
 			add_country_leader_trait = the_young_magnate
 
-			add_ideas = MY_prophecy
-			add_ideas = MY_future_knowledge
-
-			release = MOR
-
-			MOR = {
-                every_state = {
-                    limit = {
-                        is_owned_by = ROOT
-                        NOT = { is_core_of = ROOT }
-                    }
-                    add_core_of = MOR
-                    transfer_state_to = MOR
-                }
-                every_state = {
-                    limit = {
-                        is_owned_by = ENG
-                        NOT = { is_core_of = ENG }
-                    }
-                    add_core_of = MOR
-                    transfer_state_to = MOR
-                }
-                every_state = {
-                    limit = {
-                        is_owned_by = BEL
-                        NOT = { is_core_of = BEL }
-                    }
-                    add_core_of = MOR
-                    transfer_state_to = MOR
-                }
-                every_state = {
-                    limit = {
-                        is_owned_by = HOL
-                        NOT = { is_core_of = HOL }
-                    }
-                    add_core_of = MOR
-                    transfer_state_to = MOR
-                }
-                every_state = {
-                    limit = {
-                        is_owned_by = ITA
-                        NOT = { is_core_of = ITA }
-                    }
-                    add_core_of = ITA
-                }
-                add_ideas = MY_empty_country_resource
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 365
-                }
-			}
-
-			puppet = MOR
-
 			hidden_effect = {
 				if = {
 					limit = {

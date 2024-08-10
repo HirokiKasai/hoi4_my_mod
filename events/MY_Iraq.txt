@@ -192,6 +192,19 @@ country_event = {
 		POR  = { add_opinion_modifier = { target = ROOT modifier = medium_decrease } }
 
 
+        if = {
+            limit = {
+                CHI = { is_ai = yes }
+            }
+            add_timed_idea = {
+                idea = MY_chi_resist_war
+                days = 1080
+            }
+            add_timed_idea = {
+                idea = MY_war_plan_manpowerd
+                days = 365
+            }
+        }
 	}
 
 	# 破棄しない
@@ -245,7 +258,7 @@ news_event = {
 
 
 
-# ロシア内戦（中道orファシズム）に伴う 他国の枢軸入り内戦イベント
+# 枢軸入り内戦イベント
 country_event = {
 	id = my_news.20
 	title = my_news.20.t
@@ -261,7 +274,7 @@ country_event = {
         NOT = { has_government = fascism }
 
 		# フラグを持っているか
-		has_country_flag = SOV_fascism_civil_war_check
+		has_country_flag = MY_fascism_civil_war_check
 		NOT = { has_country_flag = SOV_fascism_civil_war_complete }
 	}
 
@@ -296,6 +309,7 @@ country_event = {
 
         GER = {
             add_to_faction = ROOT
+            add_political_power = 50
         }
 
 		# 完了フラグON

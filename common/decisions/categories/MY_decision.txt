@@ -1,0 +1,53 @@
+MY_decision_ea = {
+    picture = GFX_decision_cat_picture_ARG_international_loan_decisions
+    priority = 1
+
+    allowed = {
+        # 出現条件（起動時、ロード時など一回のみ。プレイ国家や DLCなど一度だけ確認するとき使う）
+    }
+
+    visible = {
+        # 表示条件
+        is_ai = no
+    }
+
+    available = {
+        # 毎フレームチェックする条件（戦争中か、人的資源は、関係値はどうか、など）
+    }
+}
+
+MY_decision_europe = {
+    picture = GFX_decision_cat_picture_ARG_international_loan_decisions
+    priority = 1
+
+    allowed = {
+        # 出現条件（起動時、ロード時など一回のみ。プレイ国家や DLCなど一度だけ確認するとき使う）
+    }
+
+    visible = {
+        # 表示条件
+        is_ai = no
+    }
+
+    available = {
+        # 毎フレームチェックする条件（戦争中か、人的資源は、関係値はどうか、など）
+    }
+}
+
+MY_decision_axis = {
+    picture = GFX_decision_cat_picture_ARG_international_loan_decisions
+    priority = 1
+
+    allowed = {
+        # 出現条件（起動時、ロード時など一回のみ。プレイ国家や DLCなど一度だけ確認するとき使う）
+    }
+
+    visible = {
+        # 表示条件
+        is_ai = no
+    }
+
+    available = {
+        # 毎フレームチェックする条件（戦争中か、人的資源は、関係値はどうか、など）
+    }
+}

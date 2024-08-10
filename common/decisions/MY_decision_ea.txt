@@ -1,0 +1,338 @@
+MY_decision_ea = {
+
+    my_decision_ea_1 = {
+        icon = generic
+        priority = 1
+
+        # 政治力コスト
+        cost = 50
+
+        # 一度だけ実行可能か
+		fire_only_once = no
+
+		ai_will_do = { factor = 0 }
+
+        # 表示条件
+		visible = {
+			OR = {
+				has_government = fascism
+				has_government = communism
+				has_government = populism
+			}
+		}
+
+        # 有効化条件（押せるようになる）
+		available = {
+			has_army_experience < 99
+		}
+
+		# 完了までの日数
+		days_remove = 90
+
+		# 完了時のエフェクト
+		remove_effect = {
+		    add_political_power = 150
+		}
+
+        # 押下時のエフェクト
+		complete_effect = {
+			add_political_power = 50
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   日本強化
+    # -----------------------------------------------------------
+    my_decision_ea_2 = {
+        icon = generic
+        priority = 1
+
+		fire_only_once = yes
+		complete_effect = {
+			JAP = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+                add_ideas = MY_bureau_of_ships_focus
+
+                puppet = AST
+                puppet = NZL
+                puppet = SIA
+				annex_country = {
+                    target = PHI
+                    transfer_troops = yes
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = INS
+                    }
+                    add_core_of = PREV
+                }
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = JAP
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+
+                282 = {
+                    add_resource = {
+                        type = oil
+                        amount = 96
+                    }
+                    add_resource = {
+                        type = steel
+                        amount = 228
+                    }
+                    add_extra_state_shared_building_slots = 3
+                    add_building_construction = {
+                        type = synthetic_refinery
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   満州強化
+    # -----------------------------------------------------------
+    my_decision_ea_3 = {
+        icon = generic
+        priority = 1
+
+        fire_only_once = yes
+        complete_effect = {
+
+            714 = {
+                add_resource = {
+                    type = oil
+                    amount = 160
+                }
+                add_resource = {
+                    type = steel
+                    amount = 278
+                }
+            }
+
+            MAN = {
+                add_stability = 0.5
+                add_war_support = 0.5
+                annex_country = {
+                    target = MEN
+                    transfer_troops = yes
+                }
+                add_ideas = MY_all_in
+                add_ideas = MY_fascism
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 365
+                }
+                add_research_slot = 2
+                add_manpower = 5000000
+                add_offsite_building = { type = industrial_complex level = 20 }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 30000
+                    producer = JAP
+                }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = MAN
+                    }
+                    add_extra_state_shared_building_slots = 10
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = MAN
+                    }
+                    add_core_of = MAN
+                }
+                if = {
+                    limit = {
+                        has_war_support < 0.5
+                    }
+                    add_war_support = 0.25
+                }
+                else_if = {
+                    limit = {
+                        has_idea = war_economy
+                    }
+                    add_political_power = 150
+                }
+                else = {
+                    add_ideas = war_economy
+                }
+            }
+        }
+    }
+
+
+    # -----------------------------------------------------------
+    #   シャム強化
+    # -----------------------------------------------------------
+    my_decision_ea_4 = {
+        icon = generic
+        priority = 1
+
+        fire_only_once = yes
+        complete_effect = {
+            SIA = {
+                add_stability = 0.25
+                add_war_support = 0.25
+                add_political_power = 300
+                transfer_state = 670
+                transfer_state = 671
+                transfer_state = 741
+                transfer_state = 286
+                transfer_state = 336
+                transfer_state = 288
+                transfer_state = 640
+                every_state = {
+                    limit = {
+                        is_owned_by = SIA
+                    }
+                    add_core_of = SIA
+                }
+                add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 30000
+                    producer = JAP
+                }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 10
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                add_offsite_building = { type = industrial_complex level = 8 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 365
+                }
+                if = {
+                    limit = {
+                        has_war_support < 0.5
+                    }
+                    add_war_support = 0.25
+                }
+                else_if = {
+                    limit = {
+                        has_idea = war_economy
+                    }
+                    add_political_power = 150
+                }
+                else = {
+                    add_ideas = war_economy
+                }
+
+                every_state = {
+                    limit = {
+                        is_owned_by = SIA
+                    }
+                    add_core_of = SIA
+                }
+                random_state = {
+                    limit = {
+                        has_state_flag = JAP_new_naval_estimates_DY1
+                    }
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+                random_state = {
+                    limit = {
+                        has_state_flag = JAP_new_naval_estimates_DY2
+                    }
+                    add_building_construction = {
+                        type = dockyard
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+
+
+    # -----------------------------------------------------------
+    #   中国強化
+    # -----------------------------------------------------------
+    my_decision_ea_5 = {
+        icon = generic
+        priority = 1
+
+        fire_only_once = yes
+        complete_effect = {
+            CHI = {
+                annex_country = {
+                    target = SIK
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = XSM
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = SHX
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = GXC
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = YUN
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = PRC
+                    transfer_troops = yes
+                }
+                puppet = TIB
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 10
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+}

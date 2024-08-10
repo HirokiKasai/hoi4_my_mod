@@ -429,7 +429,6 @@ ideas = {
 
 			modifier = {
 				weekly_manpower = 1000
-				min_export = -0.3
 				no_supply_grace = 120
 				supply_consumption_factor = -0.5
 				army_infantry_defence_factor = 0.25
@@ -709,6 +708,28 @@ ideas = {
 				tag = SOV
 				attack_bonus_against = 0.5
 				defense_bonus_against = 1
+			}
+		}
+
+		MY_chi_resist_war = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fortify_the_borders
+
+			removal_cost = -1
+
+			modifier = {
+			    army_morale_factor = 0.25
+    			army_core_defence_factor = 0.25
+			    enemy_army_bonus_air_superiority_factor = -0.5
+				industry_free_repair_factor = 1
 			}
 		}
 

@@ -1,0 +1,345 @@
+MY_decision_axis = {
+
+    # -----------------------------------------------------------
+    #   ドイツ陣営立ち上げ
+    # -----------------------------------------------------------
+    my_decision_axis_0 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    NOT = { is_in_faction_with = GER }
+			}
+		}
+
+		complete_effect = {
+            GER = { create_faction = "AXIS" }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   イギリスを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_1 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                ENG = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = ENG }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   フランスを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_2 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                FRA = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = FRA }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   イタリアを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_3 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                ITA = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = ITA }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   アメリカを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_4 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                USA = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = USA }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   日本を枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_5 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                JAP = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = JAP }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   イラクを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_6 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                IRQ = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = IRQ }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   インドを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_7 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                RAJ = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = RAJ }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   ポーランドを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_8 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                POL = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = POL }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   ポルトガルを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_9 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                POR = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = POR }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   オーストリアを枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_10 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                AUS = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = AUS }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   中国を枢軸に
+    # -----------------------------------------------------------
+    my_decision_axis_10 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = GER
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    NOT = { has_government = fascism }
+                }
+                CHI = { set_country_flag = MY_fascism_civil_war_check }
+            }
+            else = {
+                GER = { add_to_faction = CHI }
+            }
+		}
+    }
+
+}

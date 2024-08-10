@@ -15727,44 +15727,6 @@ ai_will_do = {
                     }
                 }
             }
-
-
-            GER = {
-                add_to_faction = JAP
-            }
-
-            USA = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            ENG = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            FRA = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            PER = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            AFG = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            IRQ = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            RAJ = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
-            MOR = {
-                set_country_flag = SOV_fascism_civil_war_check
-            }
-
 		}
 	}
 	focus = {

@@ -1,0 +1,335 @@
+MY_decision_europe = {
+
+    # -----------------------------------------------------------
+    #   ドイツ強化
+    # -----------------------------------------------------------
+    my_decision_europe_1 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+			GER = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+
+                every_state = {
+                    limit = {
+                        is_owned_by = POL
+                    }
+                    add_core_of = PREV
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = CZE
+                    }
+                    add_core_of = PREV
+                }
+
+                puppet = SWE
+                puppet = SWI
+				annex_country = {
+                    target = HOL
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = BEL
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = DEN
+                    transfer_troops = yes
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   イタリア強化
+    # -----------------------------------------------------------
+    my_decision_europe_2 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+			ITA = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+                add_ideas = MY_bureau_of_ships_focus
+
+				annex_country = {
+                    target = YUG
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = ALB
+                    transfer_troops = yes
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #    ポルトガル強化
+    # -----------------------------------------------------------
+    my_decision_europe_3 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+			POR = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+                add_ideas = MY_bureau_of_ships_focus
+
+                puppet = BRA
+                puppet = ARG
+                puppet = CHL
+                puppet = URG
+                puppet = PAR
+                puppet = BOL
+				annex_country = {
+                    target = INS
+                    transfer_troops = yes
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   イギリス強化
+    # -----------------------------------------------------------
+    my_decision_europe_4 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+			ENG = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+                add_ideas = MY_bureau_of_ships_focus
+
+                every_state = {
+                    limit = {
+                        is_owned_by = VEN
+                    }
+                    add_core_of = PREV
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = IRE
+                    }
+                    add_core_of = PREV
+                }
+
+                puppet = NOR
+				annex_country = {
+                    target = IRE
+                    transfer_troops = yes
+                }
+				annex_country = {
+                    target = VEN
+                    transfer_troops = yes
+                }
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   フランス強化
+    # -----------------------------------------------------------
+    my_decision_europe_5 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+		    FRA = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+                add_ideas = MY_bureau_of_ships_focus
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+
+		        release = MOR
+		    }
+
+            MOR = {
+                every_state = {
+                    limit = {
+                        is_owned_by = FRA
+                        NOT = { is_core_of = FRA }
+                    }
+                    add_core_of = MOR
+                    transfer_state_to = MOR
+                }
+                add_ideas = MY_empty_country_resource
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 365
+                }
+
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                }
+            }
+
+            FRA = {
+                puppet = MOR
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   オーハン（オーストリア）強化
+    # -----------------------------------------------------------
+    my_decision_europe_6 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+		    AUS = {
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_timed_idea = {
+                    idea = MY_three_year_development
+                    days = 1095
+                }
+                add_ideas = MY_empty_country_resource
+                puppet = BUL
+                annex_country = {
+                    target = ROM
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = HUN
+                    transfer_troops = yes
+                }
+                annex_country = {
+                    target = CZE
+                    transfer_troops = yes
+                }
+
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+		}
+    }
+}
