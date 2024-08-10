@@ -1,29 +1,29 @@
-MY_decision_axis = {
+MY_decision_ally = {
 
     # -----------------------------------------------------------
-    #   ドイツ陣営立ち上げ
+    #   イギリス陣営立ち上げ
     # -----------------------------------------------------------
-    my_decision_axis_0 = {
+    my_decision_ally_0 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    NOT = { is_in_faction_with = GER }
+			ENG = {
+			    NOT = { is_in_faction_with = ENG }
 			}
 		}
 
 		complete_effect = {
-            GER = { create_faction = "AXIS" }
+            ENG = { create_faction = "EU" }
 		}
     }
 
     # -----------------------------------------------------------
-    #   イギリスを枢軸に
+    #   ドイツを連合に
     # -----------------------------------------------------------
-    my_decision_axis_1 = {
+    my_decision_ally_1 = {
         icon = generic
         priority = 1
         fire_only_once = yes
@@ -31,39 +31,39 @@ MY_decision_axis = {
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
 		complete_effect = {
             if = {
                 limit = {
-                    ENG = {
-                        NOT = { has_government = fascism }
+                    GER = {
+                        NOT = { has_government = democratic }
                     }
                 }
-                ENG = { set_country_flag = MY_fascism_civil_war_check }
+                GER = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = ENG }
+                ENG = { add_to_faction = GER }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   フランスを枢軸に
+    #   フランスを連合に
     # -----------------------------------------------------------
-    my_decision_axis_2 = {
+    my_decision_ally_2 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -71,30 +71,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     FRA = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                FRA = { set_country_flag = MY_fascism_civil_war_check }
+                FRA = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = FRA }
+                ENG = { add_to_faction = FRA }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   イタリアを枢軸に
+    #   イタリアを連合に
     # -----------------------------------------------------------
-    my_decision_axis_3 = {
+    my_decision_ally_3 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -102,30 +102,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     ITA = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                ITA = { set_country_flag = MY_fascism_civil_war_check }
+                ITA = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = ITA }
+                ENG = { add_to_faction = ITA }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   アメリカを枢軸に
+    #   アメリカを連合に
     # -----------------------------------------------------------
-    my_decision_axis_4 = {
+    my_decision_ally_4 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -133,30 +133,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     USA = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                USA = { set_country_flag = MY_fascism_civil_war_check }
+                USA = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = USA }
+                ENG = { add_to_faction = USA }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   日本を枢軸に
+    #   日本を連合に
     # -----------------------------------------------------------
-    my_decision_axis_5 = {
+    my_decision_ally_5 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -164,30 +164,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     JAP = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                JAP = { set_country_flag = MY_fascism_civil_war_check }
+                JAP = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = JAP }
+                ENG = { add_to_faction = JAP }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   イラクを枢軸に
+    #   イラクを連合に
     # -----------------------------------------------------------
-    my_decision_axis_6 = {
+    my_decision_ally_6 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -195,30 +195,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     IRQ = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                IRQ = { set_country_flag = MY_fascism_civil_war_check }
+                IRQ = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = IRQ }
+                ENG = { add_to_faction = IRQ }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   インドを枢軸に
+    #   インドを連合に
     # -----------------------------------------------------------
-    my_decision_axis_7 = {
+    my_decision_ally_7 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -226,30 +226,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     RAJ = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                RAJ = { set_country_flag = MY_fascism_civil_war_check }
+                RAJ = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = RAJ }
+                ENG = { add_to_faction = RAJ }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   ポーランドを枢軸に
+    #   ポーランドを連合に
     # -----------------------------------------------------------
-    my_decision_axis_8 = {
+    my_decision_ally_8 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -257,30 +257,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     POL = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                POL = { set_country_flag = MY_fascism_civil_war_check }
+                POL = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = POL }
+                ENG = { add_to_faction = POL }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   ポルトガルを枢軸に
+    #   ポルトガルを連合に
     # -----------------------------------------------------------
-    my_decision_axis_9 = {
+    my_decision_ally_9 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -288,30 +288,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     POR = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                POR = { set_country_flag = MY_fascism_civil_war_check }
+                POR = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = POR }
+                ENG = { add_to_faction = POR }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   オーストリアを枢軸に
+    #   オーストリアを連合に
     # -----------------------------------------------------------
-    my_decision_axis_10 = {
+    my_decision_ally_10 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -319,30 +319,30 @@ MY_decision_axis = {
             if = {
                 limit = {
                     AUS = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                AUS = { set_country_flag = MY_fascism_civil_war_check }
+                AUS = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = AUS }
+                ENG = { add_to_faction = AUS }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   中国を枢軸に
+    #   中国を連合に
     # -----------------------------------------------------------
-    my_decision_axis_10 = {
+    my_decision_ally_10 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
-			    is_in_faction_with = GER
+			ENG = {
+			    is_in_faction_with = ENG
 			}
 		}
 
@@ -350,13 +350,13 @@ MY_decision_axis = {
             if = {
                 limit = {
                     CHI = {
-                        NOT = { has_government = fascism }
+                        NOT = { has_government = democratic }
                     }
                 }
-                CHI = { set_country_flag = MY_fascism_civil_war_check }
+                CHI = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = CHI }
+                ENG = { add_to_faction = CHI }
             }
 		}
     }
