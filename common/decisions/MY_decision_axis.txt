@@ -235,7 +235,6 @@ MY_decision_axis = {
         # 有効化条件（押せるようになる）
 		available = {
 			GER = {
-			GER = {
 			    is_in_faction_with = GER
 			}
 		}
@@ -265,7 +264,6 @@ MY_decision_axis = {
         # 有効化条件（押せるようになる）
 		available = {
 			GER = {
-			GER = {
 			    is_in_faction_with = GER
 			}
 		}
@@ -294,7 +292,6 @@ MY_decision_axis = {
 
         # 有効化条件（押せるようになる）
 		available = {
-			GER = {
 			GER = {
 			    is_in_faction_with = GER
 			}
