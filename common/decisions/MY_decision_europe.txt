@@ -9,13 +9,9 @@ MY_decision_europe = {
         fire_only_once = yes
 		complete_effect = {
 			GER = {
+			    set_country_flag = MY_power_up_GER
                 add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 1095
-                }
-                add_ideas = MY_empty_country_resource
 
                 every_state = {
                     limit = {
@@ -75,13 +71,9 @@ MY_decision_europe = {
         fire_only_once = yes
 		complete_effect = {
 			ITA = {
+			    set_country_flag = MY_power_up_ITA
                 add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 1095
-                }
-                add_ideas = MY_empty_country_resource
                 add_ideas = MY_bureau_of_ships_focus
 
 				annex_country = {
@@ -95,6 +87,12 @@ MY_decision_europe = {
                 every_state = {
                     limit = {
                         is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+                every_state = {
+                    limit = {
+                        is_owned_by = GRE
                     }
                     add_core_of = PREV
                 }
@@ -123,13 +121,9 @@ MY_decision_europe = {
         fire_only_once = yes
 		complete_effect = {
 			POR = {
+			    set_country_flag = MY_power_up_POR
                 add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 1095
-                }
-                add_ideas = MY_empty_country_resource
                 add_ideas = MY_bureau_of_ships_focus
 
                 puppet = BRA
@@ -173,13 +167,9 @@ MY_decision_europe = {
         fire_only_once = yes
 		complete_effect = {
 			ENG = {
+			    set_country_flag = MY_power_up_ENG
                 add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 1095
-                }
-                add_ideas = MY_empty_country_resource
                 add_ideas = MY_bureau_of_ships_focus
 
                 every_state = {
@@ -229,13 +219,9 @@ MY_decision_europe = {
         fire_only_once = yes
 		complete_effect = {
 		    FRA = {
+			    set_country_flag = MY_power_up_FRA
                 add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 1095
-                }
-                add_ideas = MY_empty_country_resource
                 add_ideas = MY_bureau_of_ships_focus
 
                 every_owned_state = {
@@ -283,28 +269,24 @@ MY_decision_europe = {
     }
 
     # -----------------------------------------------------------
-    #   オーハン（オーストリア）強化
+    #   オーハン（ハンガリー）強化
     # -----------------------------------------------------------
     my_decision_europe_6 = {
         icon = generic
         priority = 1
         fire_only_once = yes
 		complete_effect = {
-		    AUS = {
+		    HUN = {
+			    set_country_flag = MY_power_up_HUN
                 add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
-                add_timed_idea = {
-                    idea = MY_three_year_development
-                    days = 1095
-                }
-                add_ideas = MY_empty_country_resource
                 puppet = BUL
                 annex_country = {
                     target = ROM
                     transfer_troops = yes
                 }
                 annex_country = {
-                    target = HUN
+                    target = AUS
                     transfer_troops = yes
                 }
                 annex_country = {
@@ -329,6 +311,220 @@ MY_decision_europe = {
                         instant_build = yes
                     }
                 }
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   ソヴィエト強化
+    # -----------------------------------------------------------
+    my_decision_europe_7 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+		complete_effect = {
+		    SOV = {
+			    set_country_flag = MY_power_up_SOV
+		        add_political_power = 300
+                add_ideas = militarism_focus
+                add_offsite_building = { type = industrial_complex level = 10 }
+                add_offsite_building = { type = dockyard level = 10 }
+
+                puppet = TUR
+                every_state = {
+                    limit = {
+                        is_owned_by = PREV
+                    }
+                    add_core_of = PREV
+                }
+                every_owned_state = {
+                    limit = {
+                        is_controlled_by = PREV
+                    }
+                    add_extra_state_shared_building_slots = 6
+                    add_building_construction = {
+                        type = infrastructure
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   ドイツをさらに強化
+    # -----------------------------------------------------------
+    my_decision_europe_11 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    has_country_flag = MY_power_up_GER
+			}
+		}
+
+		complete_effect = {
+			GER = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   イタリア強化
+    # -----------------------------------------------------------
+    my_decision_europe_12 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			ITA = {
+			    has_country_flag = MY_power_up_ITA
+			}
+		}
+
+		complete_effect = {
+			ITA = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #    ポルトガル強化
+    # -----------------------------------------------------------
+    my_decision_europe_13 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+		available = {
+			POR = {
+			    has_country_flag = MY_power_up_POR
+			}
+		}
+
+		complete_effect = {
+			POR = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   イギリス強化
+    # -----------------------------------------------------------
+    my_decision_europe_14 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+		available = {
+			ENG = {
+			    has_country_flag = MY_power_up_ENG
+			}
+		}
+
+		complete_effect = {
+			ENG = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   フランス強化
+    # -----------------------------------------------------------
+    my_decision_europe_15 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+		available = {
+			FRA = {
+			    has_country_flag = MY_power_up_FRA
+			}
+		}
+
+		complete_effect = {
+		    FRA = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
+		    }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   オーハン（ハンガリー）強化
+    # -----------------------------------------------------------
+    my_decision_europe_16 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+		available = {
+			HUN = {
+			    has_country_flag = MY_power_up_HUN
+			}
+		}
+
+		complete_effect = {
+		    HUN = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
+            }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   ソヴィエト強化
+    # -----------------------------------------------------------
+    my_decision_europe_17 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+		available = {
+			SOV = {
+			    has_country_flag = MY_power_up_SOV
+			}
+		}
+
+		complete_effect = {
+		    SOV = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
             }
 		}
     }

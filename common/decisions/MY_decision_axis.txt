@@ -318,21 +318,21 @@ MY_decision_axis = {
 		complete_effect = {
             if = {
                 limit = {
-                    AUS = {
+                    HUN = {
                         NOT = { has_government = fascism }
                     }
                 }
-                AUS = { set_country_flag = MY_fascism_civil_war_check }
+                HUN = { set_country_flag = MY_fascism_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = AUS }
+                GER = { add_to_faction = HUN }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   中国を枢軸に
+    #   ソヴィエトを枢軸に
     # -----------------------------------------------------------
     my_decision_axis_10 = {
         icon = generic
@@ -349,14 +349,14 @@ MY_decision_axis = {
 		complete_effect = {
             if = {
                 limit = {
-                    CHI = {
+                    SOV = {
                         NOT = { has_government = fascism }
                     }
                 }
-                CHI = { set_country_flag = MY_fascism_civil_war_check }
+                SOV = { set_country_flag = MY_fascism_civil_war_check }
             }
             else = {
-                GER = { add_to_faction = CHI }
+                GER = { add_to_faction = SOV }
             }
 		}
     }

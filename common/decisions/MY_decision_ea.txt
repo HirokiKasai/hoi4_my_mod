@@ -51,7 +51,8 @@ MY_decision_ea = {
 		fire_only_once = yes
 		complete_effect = {
 			JAP = {
-                add_ideas = militarism_focus
+ 			    set_country_flag = MY_power_up_JAP
+               add_ideas = militarism_focus
                 add_offsite_building = { type = industrial_complex level = 10 }
                 add_timed_idea = {
                     idea = MY_three_year_development
@@ -109,6 +110,33 @@ MY_decision_ea = {
                     }
                 }
 
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   日本をさらに強化
+    # -----------------------------------------------------------
+    my_decision_ea_12 = {
+        icon = generic
+        priority = 1
+		fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			JAP = {
+			    has_country_flag = MY_power_up_JAP
+			}
+		}
+
+		complete_effect = {
+			JAP = {
+			    set_technology = { mobile_warfare = 1 }
+			    set_technology = { pocket_defence = 1 }
+			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { superior_firepower = 1 }
+			    add_ideas = MY_decision_power_up
             }
 		}
     }

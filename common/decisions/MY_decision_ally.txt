@@ -318,21 +318,21 @@ MY_decision_ally = {
 		complete_effect = {
             if = {
                 limit = {
-                    AUS = {
+                    HUN = {
                         NOT = { has_government = democratic }
                     }
                 }
-                AUS = { set_country_flag = MY_democratic_civil_war_check }
+                HUN = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                ENG = { add_to_faction = AUS }
+                ENG = { add_to_faction = HUN }
             }
 		}
     }
 
 
     # -----------------------------------------------------------
-    #   中国を連合に
+    #   ソヴィエトを連合に
     # -----------------------------------------------------------
     my_decision_ally_10 = {
         icon = generic
@@ -349,14 +349,14 @@ MY_decision_ally = {
 		complete_effect = {
             if = {
                 limit = {
-                    CHI = {
+                    SOV = {
                         NOT = { has_government = democratic }
                     }
                 }
-                CHI = { set_country_flag = MY_democratic_civil_war_check }
+                SOV = { set_country_flag = MY_democratic_civil_war_check }
             }
             else = {
-                ENG = { add_to_faction = CHI }
+                ENG = { add_to_faction = SOV }
             }
 		}
     }
