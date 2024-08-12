@@ -77,8 +77,8 @@
 			air_experience = 25
 
             set_technology = { mobile_warfare = 1 }
-            set_technology = { pocket_defence = 1 }
-            set_technology = { grand_battle_plan = 1 }
+            set_technology = { mass_assault = 1 }
+            set_technology = { trench_warfare = 1 }
             set_technology = { superior_firepower = 1 }
 
 			if = {

@@ -370,8 +370,8 @@ MY_decision_europe = {
 		complete_effect = {
 			GER = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
             }
@@ -396,8 +396,8 @@ MY_decision_europe = {
 		complete_effect = {
 			ITA = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
             }
@@ -421,8 +421,8 @@ MY_decision_europe = {
 		complete_effect = {
 			POR = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
             }
@@ -446,8 +446,8 @@ MY_decision_europe = {
 		complete_effect = {
 			ENG = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
             }
@@ -471,8 +471,8 @@ MY_decision_europe = {
 		complete_effect = {
 		    FRA = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
 		    }
@@ -496,8 +496,8 @@ MY_decision_europe = {
 		complete_effect = {
 		    HUN = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
             }
@@ -521,8 +521,8 @@ MY_decision_europe = {
 		complete_effect = {
 		    SOV = {
 			    set_technology = { mobile_warfare = 1 }
-			    set_technology = { pocket_defence = 1 }
-			    set_technology = { grand_battle_plan = 1 }
+			    set_technology = { mass_assault = 1 }
+			    set_technology = { trench_warfare = 1 }
 			    set_technology = { superior_firepower = 1 }
 			    add_ideas = MY_decision_power_up
             }
