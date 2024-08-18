@@ -458,10 +458,10 @@ country_event = {
         start_civil_war = {
             ruling_party = communism
             ideology = ROOT
-            size = 0.35
+            size = 0.4
         }
 
-        ENG = {
+        SOV = {
             add_to_faction = ROOT
             add_political_power = 50
         }
