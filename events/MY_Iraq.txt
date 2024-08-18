@@ -340,7 +340,7 @@ country_event = {
 	id = my_news.21
 	title = my_news.21.t
 	desc = my_news.21.desc
-	picture = GFX_report_event_eng_good_blackshirt_march
+	picture = GFX_report_event_worker_protests
 
 	trigger = {
 
@@ -408,6 +408,83 @@ country_event = {
 
 		# 完了フラグON
 		set_country_flag = MY_democratic_civil_war_complete
+	}
+}
+
+
+# コミンテルン入り内戦イベント
+country_event = {
+	id = my_news.22
+	title = my_news.22.t
+	desc = my_news.22.desc
+	picture = GFX_report_event_worker_protests
+
+	trigger = {
+
+		# 内戦中ではない
+		has_civil_war = no
+
+        # 共産主義ではない
+        NOT = { has_government = communism }
+
+		# フラグを持っているか
+		has_country_flag = MY_communism_civil_war_check
+		NOT = { has_country_flag = MY_communism_civil_war_complete }
+	}
+
+    # 発生日時の乱数
+	mean_time_to_happen = {
+		days = 30
+	}
+
+    # 内戦！
+	option = {
+		name = my_news.22.a
+
+		# AIが選択する確率（別の選択肢との数値の差で確率が決まる）
+		ai_chance = {
+        	factor = 10
+        }
+
+        add_political_power = 250
+        add_stability = 0.1
+        add_war_support = 0.1
+
+        add_popularity = {
+            ideology = communism
+            popularity = 0.5
+        }
+
+        start_civil_war = {
+            ruling_party = communism
+            ideology = ROOT
+            size = 0.35
+        }
+
+        ENG = {
+            add_to_faction = ROOT
+            add_political_power = 50
+        }
+
+		# 完了フラグON
+		set_country_flag = MY_communism_civil_war_complete
+	}
+
+
+	# 妥協
+	option = {
+		name = my_news.22.b
+		ai_chance = {
+        	factor = 0
+        }
+
+        add_political_power = 300
+        add_stability = -0.05
+        add_war_support = -0.05
+        add_ideas = MY_last_battalion
+
+		# 完了フラグON
+		set_country_flag = MY_communism_civil_war_complete
 	}
 }
 

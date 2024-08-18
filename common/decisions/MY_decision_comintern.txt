@@ -1,0 +1,364 @@
+MY_decision_comintern = {
+
+    # -----------------------------------------------------------
+    #   ソヴィエト陣営立ち上げ
+    # -----------------------------------------------------------
+    my_decision_comintern_0 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    NOT = { is_in_faction_with = SOV }
+			}
+		}
+
+		complete_effect = {
+            SOV = { create_faction = "COMINTERN" }
+		}
+    }
+
+    # -----------------------------------------------------------
+    #   イギリスをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_1 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    ENG = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                ENG = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = ENG }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   フランスをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_2 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    FRA = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                FRA = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = FRA }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   イタリアをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_3 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    ITA = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                ITA = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = ITA }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   アメリカをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_4 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    USA = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                USA = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = USA }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   日本をコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_5 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    JAP = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                JAP = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = JAP }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   イラクをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_6 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    IRQ = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                IRQ = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = IRQ }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   インドをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_7 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    RAJ = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                RAJ = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = RAJ }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   ポーランドをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_8 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    POL = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                POL = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = POL }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   ポルトガルをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_9 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    POR = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                POR = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = POR }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   オーストリアをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_10 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			SOV = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    HUN = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                HUN = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = HUN }
+            }
+		}
+    }
+
+
+    # -----------------------------------------------------------
+    #   ドイツをコミンテルンに
+    # -----------------------------------------------------------
+    my_decision_comintern_10 = {
+        icon = generic
+        priority = 1
+        fire_only_once = yes
+
+        # 有効化条件（押せるようになる）
+		available = {
+			GER = {
+			    is_in_faction_with = SOV
+			}
+		}
+
+		complete_effect = {
+            if = {
+                limit = {
+                    GER = {
+                        NOT = { has_government = communism }
+                    }
+                }
+                GER = { set_country_flag = MY_communism_civil_war_check }
+            }
+            else = {
+                SOV = { add_to_faction = GER }
+            }
+		}
+    }
+
+}
